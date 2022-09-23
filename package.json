@@ -1,0 +1,25 @@
+{
+  "name": "workout-planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "db:create": "createdb workout",
+    "db:destroy": "dropdb workout",
+    "db:init": "psql -f schema.sql workout",
+    "db:seed": "psql -f seed.sql workout",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg": "^8.8.0",
+    "pg-promise": "^10.12.0"
+  }
+}
