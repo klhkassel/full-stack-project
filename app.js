@@ -16,7 +16,7 @@ app.set('view engine', 'html');
 
 
 app.get("/", (req, res) => {
-    res.render("home")
+    res.send("home")
 })
 
 
