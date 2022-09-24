@@ -2275,7 +2275,7 @@ label {
     overflow: hidden;
 }
 
-.gallery-box:before {
+/* .gallery-box:before {
     content: "";
     position: absolute;
     top: 0;
@@ -2287,7 +2287,7 @@ label {
     pointer-events: none;
     transition: 0.3s;
     z-index: 1;
-}
+} */
 
 .gallery-box:hover:before {
     opacity: 0.5;
