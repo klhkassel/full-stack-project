@@ -56,7 +56,9 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="site-brnading">
-                        <a href="index.html" title="Gimnasio">
+
+                        <a href="/" title="Gimnasio">
+
                             <img src="/images/logo.png" width="170" height="27" alt="Gimnasio">
                         </a>
                     </div>
@@ -67,37 +69,25 @@
                             <button class="toggle-button"><span></span></button>
                             <div class="mobile-menu-box">
 								<ul>
-									<li><a href="/" title="Home">Home</a></li>
-									<li><a href="about-us.html" title="About Us">About Us</a></li>
+									<li class=""><a href="/" title="Home">Home</a></li>
+									<li><a href="" title="About Us">About Us</a></li>
                                     <li class="">
-                                        <a href="javascript:void(0);" title="Service">Workout Builder</a>
+                                        <a href="/workout_builder" title="Service">Workout Builder</a>
                                     </li>
-									<!-- <li class="sub-items">
-                                        <a href="javascript:void(0);" title="Pages">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="bmi-calculator.html" title="BMI Calculator">BMI Calculator</a></li>
-                                            <li><a href="team.html" title="Team">Team</a></li>
-                                            <li><a href="price.html" title="Price">Price</a></li>
-                                            <li><a href="faq.html" title="FAQ">FAQ</a></li>
-                                            <li><a href="testimonial.html" title="Testimonial">Testimonial</a></li>
-                                            <li><a href="404.html" title="404 Error">404 Error</a></li>
-                                            <li><a href="coming-soon.html" title="Coming Soon">Coming Soon</a></li>
-                                        </ul>
-                                    </li> -->
 									<li class="sub-items">
                                         <a href="javascript:void(0);" title="Blog">Blog</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog-list.html" title="Blog List">Blog List</a></li>
-                                            <li><a href="blog-detail.html" title="Blog Detail">Blog Detail</a></li>
+                                            <li><a href="/blog_list" title="Blog List">Blog List</a></li>
+                                            <li><a href="/blog_detail" title="Blog Detail">Blog Detail</a></li>
                                         </ul>
                                     </li>
-									<li><a href="contact.html" title="Contact">Contact</a></li>
+									<li><a href="/contact" title="Contact">Contact</a></li>
 								</ul>
 							</div>
                         </nav>
-                        <div class="header-btn">
+                        <!-- <div class="header-btn">
                             <a href="contact.html" class="sec-btn" title="Join Us"><span>Login</span></a>
-                        </div>
+                        </div> -->
                         <div class="black-shadow"></div>
                     </div>
                 </div>
@@ -135,7 +125,7 @@
                                 <img width="370" height="380" src="<%= category.img %>" alt="Body Building">
                             </div>
                             <div class="service-title">
-                                <h3 class="h3-title"><a href="exercises.html" title="Body Building"></a><%= category.type %></h3>
+                                <h3 class="h3-title"><a href="/exercises/<%= category.type %>" title="Body Building"><%= category.type %></a></h3>
                             </div>
                         </div>
                     </div>
@@ -470,91 +460,88 @@
     </section>
     <!-- Subscribe End -->
 
-    <!-- Footer Start -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-4">
-                    <div class="footer-info">
-                        <div class="footer-logo">
-                            <a href="index.html" title="Gimnasio">
-                                <img src="assets/images/logo.png" width="170" height="27" alt="Gimnasio">
-                            </a>
-                        </div>
-                        <p>With our professional trainers, we will guide you with the best program to help you get a healthy body.</p>
-                        <div class="social-icon">
-                            <a href="javascript:void(0);" title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="javascript:void(0);" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="javascript:void(0);" title="Follow on Twitter"><i class="fab fa-twitter"></i></a>
-                        </div>
+ <!-- Footer Start -->
+ <footer class="site-footer">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-4">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="/" title="Gimnasio">
+                            <img src="/images/logo.png" width="170" height="27" alt="Gimnasio">
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="our-links">
-                        <h3 class="h3-title footer-title">Our Links</h3>
-                        <ul>
-                            <li><a href="index.html" title="Home">Home</a></li>
-                            <li><a href="about-us.html" title="About Us">About Us</a></li>
-                            <li><a href="services.html" title="Services">Services</a></li>
-                            <li><a href="classes.html" title="Classes">Classes</a></li>
-                            <li><a href="blog-list.html" title="Blog">Blog</a></li>
-                            <li><a href="contact.html" title="Contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="our-links">
-                        <h3 class="h3-title footer-title">Other Links</h3>
-                        <ul>
-                            <li><a href="team.html" title="Team">Team</a></li>
-                            <li><a href="price.html" title="Price">Price</a></li>
-                            <li><a href="faq.html" title="FAQ">FAQ</a></li>
-                            <li><a href="bmi-calculator.html" title="BMI Calculator">BMI Calculator</a></li>
-                            <li><a href="testimonial.html" title="Testimonial">Testimonial</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="footer-contact">
-                        <h3 class="h3-title footer-title">Contact Us</h3>
-                        <div class="footer-contact-box">
-                            <span class="icon"><i class="fas fa-phone-alt"></i></span>
-                            <div class="footer-contact-box-text">
-                                <p><a href="tel:1234568790" title="+1 234 5687 90">+1 234 5687 90</a></p>
-                                <p><a href="tel:9876543210" title="+9 876 5432 10">+9 876 5432 10</a></p>
-                            </div>
-                        </div>
-                        <div class="footer-contact-box">
-                            <span class="icon"><i class="fas fa-envelope"></i></span>
-                            <div class="footer-contact-box-text">
-                                <p><a href="mailto:info@example.com" title="info@example.com">info@example.com</a></p>
-                                <p><a href="mailto:contact@example.com" title="contact@example.com">contact@example.com</a></p>
-                            </div>
-                        </div>
-                        <div class="footer-contact-box">
-                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <div class="footer-contact-box-text">
-                                <p><a href="javascript:void(0);" title="127 7th Ave, Brooklyn, North Dakota, US">127 7th Ave, Brooklyn, North Dakota, US</a></p>
-                            </div>
-                        </div>
+                    <p>With our customizable workout calendar, you'll never walk into the gym without a plan again.</p>
+                    <div class="social-icon">
+                        <a href="javascript:void(0);" title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="javascript:void(0);" title="Follow on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="javascript:void(0);" title="Follow on Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="copy-right">
-                    <p>© 2022 <a href="https://themeforest.net/user/geekcodelab" title="Geek Code Lab">Geek Code Lab</a>. All Rights Reserved.</p>
-                </div>
-                <div class="footer-bottom-link">
+            <div class="col-lg-2">
+                <div class="our-links">
+                    <h3 class="h3-title footer-title">Our Links</h3>
                     <ul>
-                        <li><a href="javascript:void(0);" title="Privacy Policy">Privacy Policy</a></li>
-                        <li><a href="javascript:void(0);" title="Terms & Condition">Terms & Condition</a></li>
-                        <li><a href="javascript:void(0);" title="Cookie policy">Cookie policy</a></li>
+                        <li><a href="/" title="Home">Home</a></li>
+                        <li><a href="/about_us" title="About Us">About Us</a></li>
+                        <li><a href="/workout_builder" title="Services">Workout Builder</a></li>
+                        <li><a href="/blog_list" title="Blog">Blog</a></li>
+                        <li><a href="/contact" title="Contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
+            <div class="col-lg-2">
+                <div class="our-links">
+                    <h3 class="h3-title footer-title">Other Links</h3>
+                    <ul>
+                        <li><a href="/faq" title="FAQ">FAQ</a></li>
+                        <li><a href="/bmi_calc" title="BMI Calculator">BMI Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="footer-contact">
+                    <h3 class="h3-title footer-title">Contact Us</h3>
+                    <div class="footer-contact-box">
+                        <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                        <div class="footer-contact-box-text">
+                            <p><a href="tel:1234568790" title="+1 234 5687 90">+1 234 5687 90</a></p>
+                            <p><a href="tel:9876543210" title="+9 876 5432 10">+9 876 5432 10</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-box">
+                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                        <div class="footer-contact-box-text">
+                            <p><a href="mailto:info@example.com" title="info@example.com">info@example.com</a></p>
+                            <p><a href="mailto:contact@example.com" title="contact@example.com">contact@example.com</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-box">
+                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <div class="footer-contact-box-text">
+                            <p><a href="javascript:void(0);" title="127 7th Ave, Brooklyn, North Dakota, US">127 7th Ave, Brooklyn, North Dakota, US</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <!-- Footer End -->
+        <div class="footer-bottom">
+            <div class="copy-right">
+                <p>© 2022 <a href="https://themeforest.net/user/geekcodelab" title="Geek Code Lab">Geek Code Lab</a>. All Rights Reserved.</p>
+            </div>
+            <div class="footer-bottom-link">
+                <ul>
+                    <li><a href="javascript:void(0);" title="Privacy Policy">Privacy Policy</a></li>
+                    <li><a href="javascript:void(0);" title="Terms & Condition">Terms & Condition</a></li>
+                    <li><a href="javascript:void(0);" title="Cookie policy">Cookie policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
 
     <!-- Scroll To Top Start -->
     <a href="javascript:void(0);" id="scroll-to-top" class="scroll-to-top">
