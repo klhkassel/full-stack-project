@@ -37,7 +37,7 @@ app.use(express.json())
 
 app.use(express.static('public'));
 
-let exerciseData = require("./data/workoutsdb.json");
+let exerciseData = require("./data/workoutsdb");
 app.get("/workout_builder", (req, res) => {
   res.render("workout-builder", {exerciseData})
 });
