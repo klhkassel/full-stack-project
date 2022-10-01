@@ -37,7 +37,7 @@ app.use(express.json())
 
 app.use(express.static('public'));
 
-let exerciseData = require("./data/workoutsdb.json");
+let exerciseData = require("./data/workoutsdb");
 app.get("/workout_builder", (req, res) => {
   res.render("workout-builder", {exerciseData})
 });
@@ -46,8 +46,39 @@ app.get("/", (req, res) => {
   res.render("index")
 })
 
-app.get("/exercises", (req, res) => {
-  res.render("exercises", {exerciseData})
+app.get("/about_us", (req, res) => {
+  res.render("about-us")
+})
+
+app.get("/blog_detail", (req, res) => {
+  res.render("blog-detail")
+})
+
+app.get("/blog_list", (req, res) => {
+  res.render("blog-list")
+})
+
+app.get("/bmi_calc", (req, res) => {
+  res.render("bmi-calculator")
+})
+
+app.get("/contact", (req, res) => {
+  res.render("contact")
+})
+
+app.get("/faq", (req, res) => {
+  res.render("faq")
+})
+
+app.get("/exercises/:id", (req, res) => {
+  let id = req.params.id
+  let workouts = []
+  exerciseData.categories.forEach(category => {
+    if(category.type === id) {
+      workouts = category.exercises
+    }
+  })
+  res.render("exercises", {id, workouts})
 })
 
 
