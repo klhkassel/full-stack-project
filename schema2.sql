@@ -5,3 +5,4 @@ CREATE TABLE Workout Input (
         muscle text,
         difficulty text,
     );
+
