@@ -50,7 +50,7 @@ app.post("/workout_buider", (req, res) => {
 
 
 app.get("/", (req, res) => {
-  res.render("index")
+  res.render("index", {exerciseData})
 })
 
 app.get("/about_us", (req, res) => {
