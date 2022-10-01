@@ -4,10 +4,10 @@ const port = 3000;
 
 // const db = pgp("postgres://localhost:5432/workout");
 const express = require("express");
+
 const app = express();
 const server = http.createServer(app);
 
-const pgp = require("pg-promise")();
 
 const es6Renderer = require("express-es6-template-engine");
 const { read } = require("fs");
@@ -15,6 +15,7 @@ app.engine("html", es6Renderer);
 app.set("views", "templates");
 app.set("view engine", "ejs");
 app.use(express.json());
+
 
 // app.get("/result",  (request, res) => {
 // var request = require('request');
@@ -35,6 +36,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 let exerciseData = require("./data/workoutsdb");
+const { Connection } = require("pg");
+
 app.get("/workout_builder", (req, res) => {
   res.render("workout-builder", { exerciseData });
 });
@@ -44,8 +47,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about_us", (req, res) => {
+
   res.render("about-us");
 });
+
 
 app.get("/bmi_calc", (req, res) => {
   res.render("bmi-calculator");
