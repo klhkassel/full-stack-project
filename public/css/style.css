@@ -2274,6 +2274,7 @@ label {
 .main-gallery {
   position: relative;
   overflow: hidden;
+
 }
 .gallery-box {
   width: 100%;
@@ -3025,11 +3026,11 @@ label {
 }
 
 .service-detail-content ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-size: 0;
-  line-height: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+    line-height: 1
 }
 
 .service-detail-content ul li {
@@ -3038,6 +3039,21 @@ label {
   position: relative;
   padding-left: 30px;
   margin-bottom: 18px;
+}
+
+.modal-content {
+    color: black;
+} 
+
+.calendar-button {
+    background: #4a01f9;
+    color: white;
+}
+
+.close-button {
+    background: white;
+    color: #4a01f9;
+    border: #4a01f9 1px solid;
 }
 
 .service-detail-content ul li:last-child {
@@ -3063,6 +3079,61 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body{
+    
+    font-size:1.0em;
+    font-family:arial;
+}
+
+.btn-grp{
+    vertical-align:middle;
+    display:inline-block;
+    
+}
+
+.btn-grp button{
+    float:left;
+    font-size:inherit;
+    border:#505050 1px solid;
+    padding:0.9em;
+    border-left:none;
+    outline: none; 
+    cursor:pointer;
+    background: #e5a30d;
+    color:#fff
+}
+
+
+.btn-grp button:first-child{
+    border-left:#505050 1px solid;
+    border-radius: 0.8em 0px 0px 0.8em;
+}
+
+.btn-grp button:last-child{
+    border-radius: 0px 0.8em 0.8em 0px;
+}
+
+.btn-grp button:hover{
+    color:#505050;
+
+}
+
+.btn-grp .btn-sel{
+    background:#aaa;
+    background:rgba(255,255,255,0.25);
+    background-color: #869d33;
+    background: -webkit-linear-gradient(top, #b8ce68, #869d33);
+    color:#fff
+}
+
+
+
+.code{
+    font-family:Consolas;
+    font-weight:bold;
+    background-color:grey;
 }
 
 /*==========Service Detail Page CSS End==========*/
