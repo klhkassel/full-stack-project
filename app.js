@@ -38,12 +38,19 @@ app.use(express.json())
 app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
+
 app.get("/workout_builder", (req, res) => {
   res.render("workout-builder", {exerciseData})
 });
 
+app.post("/workout_buider", (req, res) => {
+  
+
+})
+
+
 app.get("/", (req, res) => {
-  res.render("index")
+  res.render("index", {exerciseData})
 })
 
 app.get("/about_us", (req, res) => {
