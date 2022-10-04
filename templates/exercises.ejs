@@ -310,16 +310,30 @@
                 <li><span>Add to Calendar <i>: </i></span>
                     <p>
                         Day(s):
-                    <span class="btn-grp" id="divButtonGroup" data-bgval="2">
-                        <!-- Create another forEach() for each button, reference the day of the week id as the value of the button
-                        Take the value of the button, take id out of exercise, create event handler so that when the button is clicked it takes both values and add to the third table -->
-                        <button type="button" value="4" class="button-day">Mo</button>
-                        <button type="button" value="8" class="button-day">Tu</button>
-                        <button type="button" value="16" class="button-day">We</button>
-                        <button type="button" value="32" class="button-day">Th</button>
-                        <button type="button" value="64" class="button-day">Fr</button>
-                        <button type="button" value="128" class="button-day">Sa</button>
-                    </span>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Mo</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Tu</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">We</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Th</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Fr</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">Sa</label>
+                          </div>
                     </p>
                 </li>
             </ul>
@@ -362,5 +376,5 @@
 
 </body>
 <!-- script to api fetching -->
-<script type="text/javascript"  src="api.js" charset="utf-8" defer></script>
+
 </html>
