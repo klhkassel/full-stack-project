@@ -2,17 +2,20 @@
   "categories": [
     {
       "type": "Cardio",
+      "id": 1,
       "img": "/images/cardio.jpg",
       "exercises": [
         {
           "name": "Power Walking",
           "type": "Cardio",
+          "id": 1,
           "equipment": "None",
           "instructions": "Warm up: Walk at a slow pace for 5 minutes. Then, speed walk for 10 minutes. Cool down: Walk at a slow pace for 5 minutes."
         },
         {
           "name": "Running",
           "type": "Cardio",
+          "id": 2,
           "equipment": "None, Optional: treadmill",
           "instructions": "Warm up: Walk at a slow pace for 5 minutes. Then, run at a comfortable pace for 15 minutes. Cool down: Walk at a slow pace for 5 minutes."
         },
