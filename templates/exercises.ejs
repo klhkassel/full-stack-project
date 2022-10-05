@@ -313,27 +313,27 @@
                     <p>
                         Day(s):
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" id="mon">
                             <label class="form-check-label" for="inlineCheckbox1">Mo</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" id="tues">
                             <label class="form-check-label" for="inlineCheckbox2">Tu</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" id="wed">
                             <label class="form-check-label" for="inlineCheckbox2">We</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" id="thur">
                             <label class="form-check-label" for="inlineCheckbox2">Th</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" id="fri">
                             <label class="form-check-label" for="inlineCheckbox2">Fr</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" id="sat">
                             <label class="form-check-label" for="inlineCheckbox2">Sa</label>
                           </div>
                     </p>
@@ -342,7 +342,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn close-button" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn calendar-button">Add to Calendar</button>
+            <button type="button" method="POST" class="btn calendar-button" id="addToCalandar">Add to Calendar</button>
         </div>
         </div>
     </div>
@@ -350,6 +350,8 @@
 <% }) %>
 
 
+<!-- builderJS Link -->
+<script src="/builder.js"></script>
 
 <!-- Jquery JS Link -->
 <script src="/js/jquery-3.6.0.min.js"></script>
