@@ -80,14 +80,17 @@ app.get("/faq", (req, res) => {
 app.get("/exercises/:id", (req, res) => {
   let id = req.params.id
   let workouts = []
+  let benefits = []
   exerciseData.categories.forEach(category => {
     if(category.type === id) {
       workouts = category.exercises
+      benefits = category.benefits
     }
   })
   res.render("exercises", {id, workouts})
-})
+  })
 
+app.post()
 
 
 
