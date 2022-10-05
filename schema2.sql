@@ -1,25 +1,17 @@
 
 CREATE TABLE workout_input (
         id serial PRIMARY KEY,
-        category text NOT NULL,
-        exercise_type text,
-        muscle text,
-        difficulty text
+        exercise varchar,
+        instructions varchar,
     );
 
 
-CREATE TABLE week (
+CREATE TABLE dayofweek (
     id serial PRIMARY KEY,
-    monday text,
-    tuesday text,
-    wednesday text,
-    thursday text,
-    friday text,
-    saturday text
+    dayofweek varchar,
 )
 
 CREATE TABLE daysOfWeek_Exercises (
-    id serial PRIMARY KEY,
-    dayofweek text,
-    exercise_type
+    workout_input numeric,
+    dayofweek numeric,
 )
