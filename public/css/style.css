@@ -2978,6 +2978,15 @@ label {
   z-index: 5;
 }
 
+#modal-button {
+  background: #4a01f9;
+  color: white;
+}
+
+#modal-button:hover {
+  color: black;
+}
+
 .service-detail-box {
   position: relative;
   width: 100%;

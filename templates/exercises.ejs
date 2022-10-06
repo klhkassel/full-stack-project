@@ -119,10 +119,9 @@
                     <div class="service-detail-content">
                         <h2 class="h2-title">Benefits of <%= id %></h2>
                         <ul>
-                            <li></li>
-                            <li>Benefit #2</li>
-                            <li>Benefit #3</li>
-                            <li>Benefit #4</li>
+                           <% benefits.forEach(benefit => { %>
+                            <li><%= benefit %></li>
+                            <% }) %>
                         </ul>
                     </div>
                 </div>
@@ -143,8 +142,8 @@
                                 <ul>    
                                     <li><img src="<%= exercise.img %>"/></li>
                                     <li><span>Category <i>:</i></span> <%= exercise.type %></li>
-                                    <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
-                                        Launch demo modal
+                                    <li><button id="modal-button" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
+                                        Learn More/Add to Calendar
                                       </button></li>
                                     </ul>
                             </div>
@@ -350,7 +349,14 @@
 <!-- Custom JS Link -->
 <script src="/js/custom.js"></script>
 
-</body>
-<!-- script to api fetching -->
+<script>
+    const getDB = async() => {
+        let results = await fetch('/database')
+        let data = await results.json()
+        
+    }
 
+    getDB()
+</script>
+</body>
 </html>

@@ -2,12 +2,12 @@ const http = require("http");
 const hostname = "127.0.0.1"
 const port = 3000
 
-// const db = pgp("postgres://localhost:5432/workout");
 const express = require("express")
 const app = express();
 const server = http.createServer(app)
 
 const pgp = require("pg-promise")();
+const db = pgp("postgres://localhost:5432/workout");
 
 const es6Renderer = require('express-es6-template-engine');
 const { read } = require("fs");
@@ -15,25 +15,6 @@ app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'ejs');
 app.use(express.json())
-
-
-
- 
-// app.get("/result",  (request, res) => {
-// var request = require('request');
-// var muscle = 'biceps';
-// request.get({
-//   url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
-//   headers: {
-//     'X-Api-Key': 'GNwhKoMr3v0Eo7kYxoFStg==fm74587zcC86VBO0'
-//   },
-// }, function(error, response, body) {
-//   if(error) return console.error('Request failed:', error);
-//   else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-//   else res.json(body)
-// })
-
-// })
 
 app.use(express.static('public'));
 
@@ -87,10 +68,12 @@ app.get("/exercises/:id", (req, res) => {
       benefits = category.benefits
     }
   })
-  res.render("exercises", {id, workouts})
+  res.render("exercises", {id, workouts, benefits})
   })
 
-app.post()
+app.get("/database", async(req, res) => {
+  let records = await db.any("SELECT * from dayofweek").then((dayofweek) => console.log(dayofweek))
+})
 
 
 
