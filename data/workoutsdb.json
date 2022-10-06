@@ -180,7 +180,7 @@
           "name": "Rolling Like a Ball",
           "type": "Pilates",
           "equipment": "Yoga Mat",
-          "instructions": " Start in a seated position with your knees bent toward your chest and your feet hovering off the floor. Roll back onto your spine with control as you inhale. Exhale while rolling back to a seated position."
+          "instructions": "Start in a seated position with your knees bent toward your chest and your feet hovering off the floor. Roll back onto your spine with control as you inhale. Exhale while rolling back to a seated position."
         },
         {
           "name": "Single Leg Stretch",
@@ -189,13 +189,7 @@
           "instructions": "Begin this exercise on your back with your knees bent at a 90-degree angle and your head curled off the floor. Straighten one leg away from your body as you hold the shin of your opposite leg and breathe in. Switch your legs as you inhale again. Repeat this switching motion, this time exhaling on each switch. Make this exercise more challenging by lowering your extended leg a few inches."
         },
         {
-          "name": "The Hundred",
-          "type": "Pilates",
-          "equipment": "Yoga Mat",
-          "instructions": "Begin by lying on your back with your knees bent as though you are resting your calves on a tabletop. Curl your head off the mat and bring your arms a few inches off the floor by your sides. Pulse your arms as you draw five rhythmic breaths in through your nose, followed by five exhalations. Perform 10 sets for a total of 100 pulses."
-        },
-        {
-          "name": "Single Straight0Leg Stretch",
+          "name": "Double Straight Leg Stretch",
           "type": "Pilates",
           "equipment": "Yoga Mat",
           "instructions": "Use the same breathing and leg-switching pattern of the single leg stretch, but this time keep both legs as straight as possible."
@@ -393,7 +387,7 @@
           "name": "Table Top Dart",
           "type": "Barre",
           "equipment": "None",
-          "instructions": "Stack your wrist under shoulders with a soft bend in your elbows. Have your head in line with your spine and your base knee directly under your hip. Engage your core and lift the working leg. Place the ball behind your working knee and hold a 90-degree angle. Lift and lower the working leg, pulse at the top Hold at the top and squeeze in on the ball or make tiny circles one direction/repeat going the opposite direction"
+          "instructions": "Stack your wrist under shoulders with a soft bend in your elbows. Have your head in line with your spine and your base knee directly under your hip. Engage your core and lift the working leg. Place the ball behind your working knee and hold a 90-degree angle. Lift and lower the working leg, pulse at the top Hold at the top and squeeze in on the ball or make tiny circles one direction/repeat going the opposite direction."
         },
         {
           "name": "Plie and Reach",
@@ -405,7 +399,7 @@
           "name": "Alternating Toe Dips",
           "type": "Barre",
           "equipment": "None",
-          "instructions": "Lie on your back with your knees bent to 90 degrees over your hips (so hips and knees are both 90). Point the toes, and then, keeping the knee at 90 degrees, imagine you’re dipping the toes of one foot into a pool of water on the floor in front of you. Bring the first leg back in and repeat to the second side. Repeat for 32 counts moving at a tempo of 2 counts out and 2 counts in, then 16 counts moving at a tempo of 1 count per movement, then 8-16 moving at a 1-tempo count, but quickly alternating the legs rather than letting them meet in the middle."
+          "instructions": "Lie on your back with your knees bent to 90 degrees over your hips (so hips and knees are both 90). Point the toes, and then, keeping the knee at 90 degrees, imagine you are dipping the toes of one foot into a pool of water on the floor in front of you. Bring the first leg back in and repeat to the second side. Repeat for 32 counts moving at a tempo of 2 counts out and 2 counts in, then 16 counts moving at a tempo of 1 count per movement, then 8-16 moving at a 1-tempo count, but quickly alternating the legs rather than letting them meet in the middle."
         },
         {
           "name": "Quadrupled Single Leg Extensions",

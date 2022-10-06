@@ -23,7 +23,6 @@
     "reques": "^0.0.1-security",
     "request": "^2.88.2"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/klhkassel/full-stack-project.git"
