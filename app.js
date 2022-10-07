@@ -58,22 +58,39 @@ app.get("/faq", (req, res) => {
   res.render("faq")
 })
 
-app.get("/exercises/:id", (req, res) => {
+app.get("/exercises/:id", async (req, res) => {
   let id = req.params.id
   let workouts = []
   let benefits = []
+
+  let dayofweek = await db.any("SELECT * from dayofweek");
+  console.log(dayofweek);
   exerciseData.categories.forEach(category => {
     if(category.type === id) {
       workouts = category.exercises
       benefits = category.benefits
     }
   })
-  res.render("exercises", {id, workouts, benefits})
+  res.render("exercises", {id, workouts, benefits, dayofweek})
   })
 
-app.get("/database", async(req, res) => {
-  let records = await db.any("SELECT * from dayofweek").then((dayofweek) => console.log(dayofweek))
-})
+app.post("/exercises", async (req, res) => {
+  const params = await req.body.json();
+  console.log(params);
+  const exerciseId = params.exerciseId;
+  const selectedDays = params.daysOfWeek;
+
+  selectedDays.forEach(day => {
+    db.query(`INSERT INTO daysOfWeek_Exercises(workout_input, dayofweek) VALUES(${exerciseId}, ${day})`);
+  });
+
+  res.sendStatus(200);
+});
+
+// app.get("/database", async(req, res) => {
+//   let records = await db.any("SELECT * from dayofweek").then((dayofweek) => console.log(dayofweek))
+//   res.json(records);
+// });
 
 
 

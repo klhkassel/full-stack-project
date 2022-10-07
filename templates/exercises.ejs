@@ -271,7 +271,7 @@
 
 </div>
 <% workouts.forEach((exercise, index) => { %>
-<div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div data-exerciseid="<%= exercise.id %>" class="modal fade" id="exampleModal<%= index %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
@@ -285,37 +285,20 @@
                 <li><span>Add to Calendar <i>: </i></span>
                     <p>
                         Day(s):
+                        <% dayofweek.forEach(day => { %>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="<%=id%>">
-                            <label class="form-check-label" for="inlineCheckbox1">Mo</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">Tu</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox2">We</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
-                            <label class="form-check-label" for="inlineCheckbox2">Th</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
-                            <label class="form-check-label" for="inlineCheckbox2">Fr</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
-                            <label class="form-check-label" for="inlineCheckbox2">Sa</label>
-                          </div>
+                            <input class="form-check-input" type="checkbox" id="dayOfWeek<%= day.id%>" value="<%= day.id%>">
+                            <label class="form-check-label" for="dayOfWeek<%= day.id%>"><%= day.dayofweek%></label>
+                        </div>
+                        <% }) %>
                     </p>
                 </li>
             </ul>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn close-button" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn calendar-button">Add to Calendar</button>
+            
+            <button type="button" class="btn calendar-button" onclick="addToCalendar(<%= index %>);">Add to Calendar</button>
         </div>
         </div>
     </div>
@@ -350,13 +333,25 @@
 <script src="/js/custom.js"></script>
 
 <script>
-    const getDB = async() => {
-        let results = await fetch('/database')
-        let data = await results.json()
-        
-    }
+    function addToCalendar(modalIdx) {
+        const $modal = $(`#exampleModal${modalIdx}`);
+        const exerciseId = $modal.data("exerciseid");
+        const $checkedDays = $modal.find('input[type="checkbox"]:checked');
 
-    getDB()
+        if($checkedDays.length == 0) {
+            alert('You must select at least one Day.');
+            return;
+        }
+
+        const daysOfWeek = $checkedDays.map(idx => $checkedDays[idx].value);
+
+        $.post('/exercises', {
+            exerciseId: exerciseId,
+            daysOfWeek: daysOfWeek
+        }, function(data) { 
+            $modal.close();
+        }, "json");
+    }
 </script>
 </body>
 </html>
