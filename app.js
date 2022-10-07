@@ -73,6 +73,7 @@ app.get("/exercises/:id", (req, res) => {
 
 app.get("/database", async(req, res) => {
   let records = await db.any("SELECT * from dayofweek").then((dayofweek) => console.log(dayofweek))
+
 })
 
 
