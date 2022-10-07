@@ -24,10 +24,10 @@ app.get("/workout_builder", (req, res) => {
   res.render("workout-builder", {exerciseData})
 });
 
-app.post("/workout_buider", (req, res) => {
+// app.post("/workout_buider", (req, res) => {
   
 
-})
+// })
 
 
 app.get("/", (req, res) => {
