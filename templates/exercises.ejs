@@ -275,7 +275,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"><%= exercise.type%></h5>
+            <h5 class="modal-title" id="exampleModalLabel"><%= exercise.name%></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -298,7 +298,7 @@
         <div class="modal-footer">
             <button type="button" class="btn close-button" data-bs-dismiss="modal">Close</button>
             
-            <button type="button" class="btn calendar-button" onclick="addToCalendar(<%= index %>);">Add to Calendar</button>
+            <button type="button" class="btn calendar-button" onclick=addToCalendar(<%= index %>)>Add to Calendar</button>
         </div>
         </div>
     </div>
@@ -335,6 +335,7 @@
 <script>
     function addToCalendar(modalIdx) {
         const $modal = $(`#exampleModal${modalIdx}`);
+        
         const exerciseId = $modal.data("exerciseid");
         const $checkedDays = $modal.find('input[type="checkbox"]:checked');
 
@@ -342,12 +343,15 @@
             alert('You must select at least one Day.');
             return;
         }
+        const weekdays = []
+        const daysOfWeek = $checkedDays.map(idx => {
 
-        const daysOfWeek = $checkedDays.map(idx => $checkedDays[idx].value);
-
+            weekdays[idx] = $checkedDays[idx].value
+        });
+        console.log(weekdays)
         $.post('/exercises', {
-            exerciseId: exerciseId,
-            daysOfWeek: daysOfWeek
+            'exerciseId' : exerciseId,
+            'daysOfWeek': weekdays
         }, function(data) { 
             $modal.close();
         }, "json");
