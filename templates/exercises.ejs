@@ -343,12 +343,15 @@
             alert('You must select at least one Day.');
             return;
         }
+        const weekdays = []
+        const daysOfWeek = $checkedDays.map(idx => {
 
-        const daysOfWeek = $checkedDays.map(idx => $checkedDays[idx].value);
-        console.log(daysOfWeek)
+            weekdays[idx] = $checkedDays[idx].value
+        });
+        console.log(weekdays)
         $.post('/exercises', {
-        'data': {'exerciseId' : 2}
-            // daysOfWeek: [4, 5]
+            'exerciseId' : exerciseId,
+            'daysOfWeek': weekdays
         }, function(data) { 
             $modal.close();
         }, "json");

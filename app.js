@@ -3,9 +3,10 @@ const hostname = "127.0.0.1"
 const port = 3000
 
 const express = require("express")
-const bodyParser = require("body-parser")
+const bodyParser = require('body-parser')
 const app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}))
 const server = http.createServer(app)
 
 const pgp = require("pg-promise")();
@@ -66,7 +67,7 @@ app.get("/exercises/:id", async (req, res) => {
   let benefits = []
 
   let dayofweek = await db.any("SELECT * from dayofweek");
-  // console.log(dayofweek);
+  console.log(dayofweek);
   exerciseData.categories.forEach(category => {
     if(category.type === id) {
       workouts = category.exercises
@@ -77,10 +78,11 @@ app.get("/exercises/:id", async (req, res) => {
   })
 
 app.post("/exercises", async (req, res) => {
-  console.log("request received" + req.body.exerciseId);
+  // const params = await req.body.json();
+  // console.log(params);
   const exerciseId = req.body.exerciseId;
   const selectedDays = req.body.daysOfWeek;
-console.log(selectedDays)
+
   selectedDays.forEach(day => {
     db.query(`INSERT INTO daysOfWeek_Exercises(workout_input, dayofweek) VALUES(${exerciseId}, ${day})`);
   });
@@ -88,13 +90,17 @@ console.log(selectedDays)
   res.sendStatus(200);
 });
 
-// app.post("/exercises1", async (req, res) => {
-//   console.log("request received" + req.body.data);
-//   const exerciseId = req.body.data.exerciseId;
-//   // const selectedDays = req.body.daysOfWeek;
-// console.log(exerciseId)
-//   res.sendStatus(200);
-// });
+app.post("/exercises1", async (req, res) => {
+  const exerciseId = req.body.exerciseId;
+  console.log(exerciseId)
+  // const selectedDays = .daysOfWeek;
+
+  // selectedDays.forEach(day => {
+  //   db.query(`INSERT INTO daysOfWeek_Exercises(workout_input, dayofweek) VALUES(${exerciseId}, ${day})`);
+  // });
+
+  res.sendStatus(200);
+});
 
 
 // app.get("/database", async(req, res) => {
