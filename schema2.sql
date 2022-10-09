@@ -1,18 +1,24 @@
 
-CREATE TABLE workout_input (
-        id serial PRIMARY KEY,
-        exercise varchar,
-        workout varchar,
-        instructions varchar
-    );
+-- CREATE TABLE workout_input (
+--         id serial PRIMARY KEY,
+--         exercise varchar,
+--         workout varchar,
+--         instructions varchar
+--     );
 
 
-CREATE TABLE dayofweek (
+-- CREATE TABLE dayofweek (
+--     id serial PRIMARY KEY,
+--     dayofweek varchar
+-- );
+
+-- CREATE TABLE daysOfWeek_Exercises (
+--     workout_input numeric,
+--     dayofweek numeric
+-- );
+
+CREATE TABLE workoutBenefits (
     id serial PRIMARY KEY,
-    dayofweek varchar
-);
-
-CREATE TABLE daysOfWeek_Exercises (
-    workout_input numeric,
-    dayofweek numeric
-);
+    workout_type varchar,
+    benefits varchar
+)
