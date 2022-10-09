@@ -138,10 +138,10 @@
                     <div class="swiper-slide">
                         <div class="gallery-box">
                             <div class="service-detail-box">
-                                <h3 class="h3-title"><%= exercise.name %></h3>
+                                <h3 class="h3-title"><%= exercise.exercise%></h3>
                                 <ul>    
                                     <li><img src="<%= exercise.img %>"/></li>
-                                    <li><span>Category <i>:</i></span> <%= exercise.type %></li>
+                                    <li><span>Category <i>:</i></span> <%= exercise.workout %></li>
                                     <li><button id="modal-button" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
                                         Learn More/Add to Calendar
                                       </button></li>
@@ -271,11 +271,12 @@
 
 </div>
 <% workouts.forEach((exercise, index) => { %>
+    <%= console.log(exercise)%>
 <div data-exerciseid="<%= exercise.id %>" class="modal fade" id="exampleModal<%= index %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"><%= exercise.name%></h5>
+            <h5 class="modal-title" id="exampleModalLabel"><%= exercise.exercise %></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -349,6 +350,7 @@
             weekdays[idx] = $checkedDays[idx].value
         });
         console.log(weekdays)
+        console.log(exerciseId)
         $.post('/exercises', {
             'exerciseId' : exerciseId,
             'daysOfWeek': weekdays

@@ -66,14 +66,23 @@ app.get("/exercises/:id", async (req, res) => {
   let workouts = []
   let benefits = []
 
-  let dayofweek = await db.any("SELECT * from dayofweek");
-  console.log(dayofweek);
-  exerciseData.categories.forEach(category => {
-    if(category.type === id) {
-      workouts = category.exercises
-      benefits = category.benefits
+  let benefitInfo = await db.any("SELECT * from workoutBenefits");
+  benefitInfo.forEach(workout => {
+    if(workout.workout_type === id) {
+      benefits.push(workout.benefits)
     }
   })
+
+  let exercises = await db.any("SELECT * from workout_input");
+  exercises.forEach( obj => {
+    if(obj.workout === id) {
+      workouts.push(obj)
+    }
+  })
+
+let dayofweek = await db.any('SELECT * from dayofweek');
+
+  console.log(workouts)
   res.render("exercises", {id, workouts, benefits, dayofweek})
   })
 
