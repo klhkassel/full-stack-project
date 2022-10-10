@@ -23,14 +23,24 @@ app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
 
-app.get("/workout_builder", (req, res) => {
-  res.render("workout-builder", {exerciseData})
+app.get("/workout_builder", async (req, res) => {
+  let dayExercises = []
+ 
+  let calendarInfo = await db.any("Select * FROM daysOfWeek_Exercises JOIN workout_input ON daysOfWeek_Exercises.workout_input = workout_input.id JOIN dayofweek ON daysOfWeek_Exercises.dayofweek = dayofweek.id");
+  calendarInfo.forEach(day => {
+
+    dayExercises.push(
+      {
+        dayName: day.dayofweek,
+        exName: day.exercise,
+        exType: day.workout,
+        exInstruction: day.instructions
+      }
+    )
+    // console.log(dayExercises)
+  })
+  res.render("workout-builder", {exerciseData, dayExercises, calendarInfo} )
 });
-
-// app.post("/workout_buider", (req, res) => {
-  
-
-// })
 
 
 app.get("/", (req, res) => {

@@ -73,31 +73,43 @@
 --    ('Fr'),
 --    ('Sa');
 
-INSERT INTO
-   workoutBenefits (workout_type, benefits)
-VALUES
-   ('Cardio', 'Cardio exercise can benefit brain and joint health. One study reported that physical activity may reduce dementia risk, no matter what age you are.'),
-   ('Cardio', 'When you work your muscles, it increases oxygen supply, therefore allowing muscles to work harder. Over time, regular cardio exercise allows your muscles to adapt to an increased workload, making regular activities seem easier.'),
-   ('Cardio', 'Your pancreas is the organ that helps convert the food you eat for energy while also helping aid in digestion. Staying active helps improves blood sugar control, decreases stress on this vital organ and reduces your chance of developing type 2 diabetes. It also helps improves good cholesterol levels while lowering blood fats.'),
-   ('Cardio', 'Physical exercise helps your energy by releasing endorphins, giving you more, lasting energy throughout your day. When it comes to hitting the sheets, struggling to fall asleep is the last thing you want after that long, busy day. The good news is that cardio helps you doze off faster and promotes REM sleep.'),
-   ('Weight Lifting', 'By stressing your bones, strength training can increase bone density and reduce the risk of osteoporosis.'),
-   ('Weight Lifting', 'Strength training may enhance your quality of life and improve your ability to do everyday activities. Strength training can also protect your joints from injury. Building muscle also can contribute to better balance and may reduce your risk of falls. This can help you maintain independence as you age.'),
-   ('Weight Lifting', 'Strength training can reduce the signs and symptoms of many chronic conditions, such as arthritis, back pain, obesity, heart disease, depression and diabetes.'),
-   ('Weight Lifting', 'Some research suggests that regular strength training and aerobic exercise may help improve thinking and learning skills for older adults.'),
-   ('Pilates', 'It can help relieve tension in your shoulders, back and legs. Having strong core muscles promotes better posture, which, in turn, can prevent or relieve the muscle tension that builds up in our day-to-day routines.'),
-   ('Pilates', 'It boosts your bodys natural ability to burn fat. Pilates is not the best exercise to burn calories quickly, however this does not mean it does not help your body burn fat.'),
-   ('Pilates', 'It is a great way to cross train and prevent injury. Because it helps build strength and flexibility, Pilates is a great way to add some functional variety into your workout routine.'),
-   ('Pilates', 'It promotes mindfulness and body awareness. Another benefit of Pilates is that it encourages you to stay in touch with your body as you build strength. Other strength training workouts, like weightlifting, encourage a mentality of pushing your body to its limits. This means you might not always be totally listening to your body, making it easier to ignore your body cues.'),
-   ('Yoga', 'Yoga improves strength, balance and flexibility. Slow movements and deep breathing increase blood flow and warm up muscles, while holding a pose can build strength.'),
-   ('Yoga', 'Yoga helps with back pain relief. Yoga is as good as basic stretching for easing pain and improving mobility in people with lower back pain. The American College of Physicians recommends yoga as a first-line treatment for chronic low back pain.'),
-   ('Yoga', 'Yoga can ease arthritis symptoms. Gentle yoga has been shown to ease some of the discomfort of tender, swollen joints for people with arthritis, according to a Johns Hopkins review of 11 recent studies.'),
-   ('Yoga', 'Yoga benefits heart health. Regular yoga practice may reduce levels of stress and body-wide inflammation, contributing to healthier hearts. Several of the factors contributing to heart disease, including high blood pressure and excess weight, can also be addressed through yoga.'),
-   ('H.I.I.T', 'HIIT may help you burn more calories than traditional exercise or burn the same number of calories in a shorter amount of time.'),
-   ('H.I.I.T', 'Due to the intensity of the workout, HIIT can elevate your metabolism for hours after exercise. This results in burning additional calories even after you have finished exercising.'),
-   ('H.I.I.T', 'If you are not very active, you may gain some muscle by starting HIIT, but not as much as you would if you engaged in weight training.'),
-   ('H.I.I.T', 'High intensity interval training can improve oxygen consumption as much as traditional endurance training, even if you exercise only about half as long.'),
-   ('Barre', 'One benefit of barre is that it will strengthen your muscles, particularly your: core, arms, thighs, glutes, pelvic floor. Strengthening your muscles helps you: maintain muscle mass as you age, control your weight, keep your joints flexible, balance better.'),
-   ('Barre', 'Participating in regular barre classes will increase your muscular endurance. Endurance influences your heartbeat and breathing patterns. Your endurance increases your stamina, so you will be able to maintain a higher level of activity in your everyday life. Plus, you will be able to exercise longer and harder. Endurance also lowers your risk of developing health conditions like diabetes, heart disease, and certain types of cancer.'),
-   ('Barre', 'Barre workouts feature a lot of stretching. This helps improve your flexibility and the range of motion in your joints. Maintaining flexibility makes it much easier to move throughout your day. It can even prevent stiffness when you sit for long periods of time.'),
-   ('Barre', 'You may find yourself sitting or standing straighter after doing barre. This could be an external benefit from these workouts. Good posture also positively influences what is going on inside your body. It can decrease pressure on your spine, reducing your chance of back pain and injury. It also helps you take deep breaths.');
+
+
+-- SELECT * FROM daysOfWeek_Exercises
+-- JOIN workout_input ON daysOfWeek_Exercises.workout_input = workout_input.id
+-- JOIN dayofweek ON daysOfWeek_Exercises.dayofweek = dayofweek.id
+
+-- SELECT * FROM daysOfWeek_Exercises
+-- JOIN daysOfWeek_Exercises ON daysOfWeek_Exercises.dayofweek = dayofweek.id;
+
+
+
+
+-- INSERT INTO
+--    workoutBenefits (workout_type, benefits)
+-- VALUES
+--    ('Cardio', 'Cardio exercise can benefit brain and joint health. One study reported that physical activity may reduce dementia risk, no matter what age you are.'),
+--    ('Cardio', 'When you work your muscles, it increases oxygen supply, therefore allowing muscles to work harder. Over time, regular cardio exercise allows your muscles to adapt to an increased workload, making regular activities seem easier.'),
+--    ('Cardio', 'Your pancreas is the organ that helps convert the food you eat for energy while also helping aid in digestion. Staying active helps improves blood sugar control, decreases stress on this vital organ and reduces your chance of developing type 2 diabetes. It also helps improves good cholesterol levels while lowering blood fats.'),
+--    ('Cardio', 'Physical exercise helps your energy by releasing endorphins, giving you more, lasting energy throughout your day. When it comes to hitting the sheets, struggling to fall asleep is the last thing you want after that long, busy day. The good news is that cardio helps you doze off faster and promotes REM sleep.'),
+--    ('Weight Lifting', 'By stressing your bones, strength training can increase bone density and reduce the risk of osteoporosis.'),
+--    ('Weight Lifting', 'Strength training may enhance your quality of life and improve your ability to do everyday activities. Strength training can also protect your joints from injury. Building muscle also can contribute to better balance and may reduce your risk of falls. This can help you maintain independence as you age.'),
+--    ('Weight Lifting', 'Strength training can reduce the signs and symptoms of many chronic conditions, such as arthritis, back pain, obesity, heart disease, depression and diabetes.'),
+--    ('Weight Lifting', 'Some research suggests that regular strength training and aerobic exercise may help improve thinking and learning skills for older adults.'),
+--    ('Pilates', 'It can help relieve tension in your shoulders, back and legs. Having strong core muscles promotes better posture, which, in turn, can prevent or relieve the muscle tension that builds up in our day-to-day routines.'),
+--    ('Pilates', 'It boosts your bodys natural ability to burn fat. Pilates is not the best exercise to burn calories quickly, however this does not mean it does not help your body burn fat.'),
+--    ('Pilates', 'It is a great way to cross train and prevent injury. Because it helps build strength and flexibility, Pilates is a great way to add some functional variety into your workout routine.'),
+--    ('Pilates', 'It promotes mindfulness and body awareness. Another benefit of Pilates is that it encourages you to stay in touch with your body as you build strength. Other strength training workouts, like weightlifting, encourage a mentality of pushing your body to its limits. This means you might not always be totally listening to your body, making it easier to ignore your body cues.'),
+--    ('Yoga', 'Yoga improves strength, balance and flexibility. Slow movements and deep breathing increase blood flow and warm up muscles, while holding a pose can build strength.'),
+--    ('Yoga', 'Yoga helps with back pain relief. Yoga is as good as basic stretching for easing pain and improving mobility in people with lower back pain. The American College of Physicians recommends yoga as a first-line treatment for chronic low back pain.'),
+--    ('Yoga', 'Yoga can ease arthritis symptoms. Gentle yoga has been shown to ease some of the discomfort of tender, swollen joints for people with arthritis, according to a Johns Hopkins review of 11 recent studies.'),
+--    ('Yoga', 'Yoga benefits heart health. Regular yoga practice may reduce levels of stress and body-wide inflammation, contributing to healthier hearts. Several of the factors contributing to heart disease, including high blood pressure and excess weight, can also be addressed through yoga.'),
+--    ('H.I.I.T', 'HIIT may help you burn more calories than traditional exercise or burn the same number of calories in a shorter amount of time.'),
+--    ('H.I.I.T', 'Due to the intensity of the workout, HIIT can elevate your metabolism for hours after exercise. This results in burning additional calories even after you have finished exercising.'),
+--    ('H.I.I.T', 'If you are not very active, you may gain some muscle by starting HIIT, but not as much as you would if you engaged in weight training.'),
+--    ('H.I.I.T', 'High intensity interval training can improve oxygen consumption as much as traditional endurance training, even if you exercise only about half as long.'),
+--    ('Barre', 'One benefit of barre is that it will strengthen your muscles, particularly your: core, arms, thighs, glutes, pelvic floor. Strengthening your muscles helps you: maintain muscle mass as you age, control your weight, keep your joints flexible, balance better.'),
+--    ('Barre', 'Participating in regular barre classes will increase your muscular endurance. Endurance influences your heartbeat and breathing patterns. Your endurance increases your stamina, so you will be able to maintain a higher level of activity in your everyday life. Plus, you will be able to exercise longer and harder. Endurance also lowers your risk of developing health conditions like diabetes, heart disease, and certain types of cancer.'),
+--    ('Barre', 'Barre workouts feature a lot of stretching. This helps improve your flexibility and the range of motion in your joints. Maintaining flexibility makes it much easier to move throughout your day. It can even prevent stiffness when you sit for long periods of time.'),
+--    ('Barre', 'You may find yourself sitting or standing straighter after doing barre. This could be an external benefit from these workouts. Good posture also positively influences what is going on inside your body. It can decrease pressure on your spine, reducing your chance of back pain and injury. It also helps you take deep breaths.');
 

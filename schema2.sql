@@ -7,18 +7,22 @@
 --     );
 
 
--- CREATE TABLE dayofweek (
---     id serial PRIMARY KEY,
---     dayofweek varchar
--- );
-
--- CREATE TABLE daysOfWeek_Exercises (
---     workout_input numeric,
---     dayofweek numeric
--- );
-
-CREATE TABLE workoutBenefits (
+CREATE TABLE dayofweek (
     id serial PRIMARY KEY,
-    workout_type varchar,
-    benefits varchar
-)
+    dayofweek varchar
+
+);
+
+-- DROP TABLE daysOfWeek_Exercises
+
+CREATE TABLE daysOfWeek_Exercises (
+    workout_input integer REFERENCES workout_input(id),
+    dayofweek integer REFERENCES dayofweek(id)
+);
+
+
+-- CREATE TABLE workoutBenefits (
+--     id serial PRIMARY KEY,
+--     workout_type varchar  ,
+--     benefits varchar
+-- )
