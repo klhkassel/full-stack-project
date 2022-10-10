@@ -191,242 +191,120 @@
             </div>
             <div class="schedule-list">
                 <div class="row">
-                    <div class="col-2">
-                        <div class="schedule-list-box odd">
-                            <div class="schedule-list-title">
-                                <h3 class="h3-title">Monday</h3>
-                            </div>
-                            <div class="schedule-list-content">
-                                <div class="schedule-box">
-                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
+                        <div class="col-2">
+                            <div class="schedule-list-box odd">
+                                <div class="schedule-list-title">
+                                    <h3 class="h3-title">Monday</h3>
                                 </div>
-                                <div class="schedule-box">
-                                    <img width="65" height="70" src="assets/images/schedule-yoga-icon.svg" alt="Yoga">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-cross-fit-icon.svg" alt="Cross Fit">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="89" height="70" src="assets/images/schedule-cardio-icon.svg" alt="Cardio">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-boxing-icon.svg" alt="Boxing">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
+                                <div class="schedule-list-content">
+                                    <% dayExercises.forEach(day => { %>
+                                        <%  if(day.dayName === 'Mo') {%>
+                                                <div class="schedule-box">
+                                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
+                                                    <h6> <%= day.exName %></h6>
+                                                    <span> <%= day.exType %></span>
+                                                    <p> <%= day.exInstructions %></p>
+                                                </div>
+                                                <% }%>                      
+                                        <%    })%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="schedule-list-box even">
-                            <div class="schedule-list-title">
-                                <h3 class="h3-title">Tuesday</h3>
-                            </div>
-                            <div class="schedule-list-content">
-                                <div class="schedule-box">
-                                    <img width="65" height="70" src="assets/images/schedule-yoga-icon.svg" alt="Yoga">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
+                        <div class="col-2">
+                            <div class="schedule-list-box odd">
+                                <div class="schedule-list-title">
+                                    <h3 class="h3-title">Tuesday</h3>
                                 </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-cross-fit-icon.svg" alt="Cross Fit">
-                                    <h6>Exercise</h6>
-                                    <span>Reps/Duration</span>
-                                    <p>Calories Burned</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
-                                    <h6>Exercise</h6>
-                                    <span>9.00 Am - 10.00 Am</span>
-                                    <p>Richard Danny</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-boxing-icon.svg" alt="Boxing">
-                                    <h6>Boxing</h6>
-                                    <span>2.00 Pm - 6.00 Pm</span>
-                                    <p>Tony Adarson</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="89" height="70" src="assets/images/schedule-cardio-icon.svg" alt="Cardio">
-                                    <h6>Cardio</h6>
-                                    <span>6.00 Pm - 8.00 Pm</span>
-                                    <p>James Stark</p>
+                                <div class="schedule-list-content">
+                                    <% dayExercises.forEach(day => { %>
+                                        <%  if(day.dayName === 'Tu') {%>
+                                                <div class="schedule-box">
+                                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
+                                                    <h6> <%= day.exName %></h6>
+                                                    <span> <%= day.exType %></span>
+                                                    <p> <%= day.exInstructions %></p>
+                                                </div>
+                                                <% }%>                      
+                                        <%    })%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="schedule-list-box odd">
-                            <div class="schedule-list-title">
-                                <h3 class="h3-title">Wednesday</h3>
-                            </div>
-                            <div class="schedule-list-content">
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-boxing-icon.svg" alt="Boxing">
-                                    <h6>Boxing</h6>
-                                    <span>6.00 Am - 7.00 Am</span>
-                                    <p>Tony Adarson</p>
+                        <div class="col-2">
+                            <div class="schedule-list-box odd">
+                                <div class="schedule-list-title">
+                                    <h3 class="h3-title">Wednesday</h3>
                                 </div>
-                                <div class="schedule-box">
-                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
-                                    <h6>Weight Lifting</h6>
-                                    <span>7.00 Am - 8.00 Am</span>
-                                    <p>Richard Danny</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="89" height="70" src="assets/images/schedule-cardio-icon.svg" alt="Cardio">
-                                    <h6>Cardio</h6>
-                                    <span>9.00 Am - 10.00 Am</span>
-                                    <p>James Stark</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="65" height="70" src="assets/images/schedule-yoga-icon.svg" alt="Yoga">
-                                    <h6>Yoga</h6>
-                                    <span>2.00 Pm - 6.00 Pm</span>
-                                    <p>Nikki Johnson</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-cross-fit-icon.svg" alt="Cross Fit">
-                                    <h6>Cross Fit</h6>
-                                    <span>6.00 Pm - 8.00 Pm</span>
-                                    <p>John Doe</p>
+                                <div class="schedule-list-content">
+                                    <% dayExercises.forEach(day => { %>
+                                        <%  if(day.dayName === 'We') {%>
+                                                <div class="schedule-box">
+                                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
+                                                    <h6> <%= day.exName %></h6>
+                                                    <span> <%= day.exType %></span>
+                                                    <p> <%= day.exInstructions %></p>
+                                                </div>
+                                                <% }%>                      
+                                        <%    })%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="schedule-list-box even">
-                            <div class="schedule-list-title">
-                                <h3 class="h3-title">Thursday</h3>
-                            </div>
-                            <div class="schedule-list-content">
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-cross-fit-icon.svg" alt="Cross Fit">
-                                    <h6>Cross Fit</h6>
-                                    <span>6.00 Am - 7.00 Am</span>
-                                    <p>John Doe</p>
+                        <div class="col-2">
+                            <div class="schedule-list-box odd">
+                                <div class="schedule-list-title">
+                                    <h3 class="h3-title">THursday</h3>
                                 </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-boxing-icon.svg" alt="Boxing">
-                                    <h6>Boxing</h6>
-                                    <span>7.00 Am - 8.00 Am</span>
-                                    <p>Tony Adarson</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="65" height="70" src="assets/images/schedule-yoga-icon.svg" alt="Yoga">
-                                    <h6>Yoga</h6>
-                                    <span>9.00 Am - 10.00 Am</span>
-                                    <p>Nikki Johnson</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="89" height="70" src="assets/images/schedule-cardio-icon.svg" alt="Cardio">
-                                    <h6>Cardio</h6>
-                                    <span>2.00 Pm - 6.00 Pm</span>
-                                    <p>James Stark</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
-                                    <h6>Weight Lifting</h6>
-                                    <span>6.00 Pm - 8.00 Pm</span>
-                                    <p>Richard Danny</p>
+                                <div class="schedule-list-content">
+                                    <% dayExercises.forEach(day => { %>
+                                        <%  if(day.dayName === 'Th') {%>
+                                                <div class="schedule-box">
+                                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
+                                                    <h6> <%= day.exName %></h6>
+                                                    <span> <%= day.exType %></span>
+                                                    <p> <%= day.exInstructions %></p>
+                                                </div>
+                                                <% }%>                      
+                                        <%    })%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="schedule-list-box odd">
-                            <div class="schedule-list-title">
-                                <h3 class="h3-title">Friday</h3>
-                            </div>
-                            <div class="schedule-list-content">
-                                <div class="schedule-box">
-                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
-                                    <h6>Weight Lifting</h6>
-                                    <span>6.00 Am - 7.00 Am</span>
-                                    <p>Richard Danny</p>
+                        <div class="col-2">
+                            <div class="schedule-list-box odd">
+                                <div class="schedule-list-title">
+                                    <h3 class="h3-title">Friday</h3>
                                 </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-cross-fit-icon.svg" alt="Cross Fit">
-                                    <h6>Cross Fit</h6>
-                                    <span>7.00 Am - 8.00 Am</span>
-                                    <p>John Doe</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="89" height="70" src="assets/images/schedule-cardio-icon.svg" alt="Cardio">
-                                    <h6>Cardio</h6>
-                                    <span>9.00 Am - 10.00 Am</span>
-                                    <p>James Stark</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="65" height="70" src="assets/images/schedule-yoga-icon.svg" alt="Yoga">
-                                    <h6>Yoga</h6>
-                                    <span>2.00 Pm - 6.00 Pm</span>
-                                    <p>Nikki Johnson</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-boxing-icon.svg" alt="Boxing">
-                                    <h6>Boxing</h6>
-                                    <span>6.00 Pm - 8.00 Pm</span>
-                                    <p>Tony Adarson</p>
+                                <div class="schedule-list-content">
+                                    <% dayExercises.forEach(day => { %>
+                                        <%  if(day.dayName === 'Fr') {%>
+                                                <div class="schedule-box">
+                                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
+                                                    <h6> <%= day.exName %></h6>
+                                                    <span> <%= day.exType %></span>
+                                                    <p> <%= day.exInstructions %></p>
+                                                </div>
+                                                <% }%>                      
+                                        <%    })%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="schedule-list-box even">
-                            <div class="schedule-list-title">
-                                <h3 class="h3-title">Saturday</h3>
-                            </div>
-                            <div class="schedule-list-content">
-                                <div class="schedule-box">
-                                    <img width="65" height="70" src="assets/images/schedule-yoga-icon.svg" alt="Yoga">
-                                    <h6>Yoga</h6>
-                                    <span>6.00 Am - 7.00 Am</span>
-                                    <p>Nikki Johnson</p>
+                        <div class="col-2">
+                            <div class="schedule-list-box odd">
+                                <div class="schedule-list-title">
+                                    <h3 class="h3-title">Saturday</h3>
                                 </div>
-                                <div class="schedule-box">
-                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
-                                    <h6>Weight Lifting</h6>
-                                    <span>7.00 Am - 8.00 Am</span>
-                                    <p>Richard Danny</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-boxing-icon.svg" alt="Boxing">
-                                    <h6>Boxing</h6>
-                                    <span>9.00 Am - 10.00 Am</span>
-                                    <p>Tony Adarson</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="70" height="70" src="assets/images/schedule-cross-fit-icon.svg" alt="Cross Fit">
-                                    <h6>Cross Fit</h6>
-                                    <span>2.00 Pm - 6.00 Pm</span>
-                                    <p>John Doe</p>
-                                </div>
-                                <div class="schedule-box">
-                                    <img width="89" height="70" src="assets/images/schedule-cardio-icon.svg" alt="Cardio">
-                                    <h6>Cardio</h6>
-                                    <span>6.00 Pm - 8.00 Pm</span>
-                                    <p>James Stark</p>
+                                <div class="schedule-list-content">
+                                    <% dayExercises.forEach(day => { %>
+                                        <%  if(day.dayName === 'Sa') {%>
+                                                <div class="schedule-box">
+                                                    <img width="68" height="70" src="assets/images/schedule-weight-lifting-icon.svg" alt="Weight Lifting">
+                                                    <h6> <%= day.exName %></h6>
+                                                    <span> <%= day.exType %></span>
+                                                    <p> <%= day.exInstructions %></p>
+                                                </div>
+                                                <% }%>                      
+                                        <%    })%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 <br>
@@ -571,6 +449,9 @@
 
 <!-- Custom JS Link -->
 <script src="/js/custom.js"></script>
+
+<script>
+</script>
 
 </body>
 </html>
