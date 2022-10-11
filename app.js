@@ -41,7 +41,7 @@ app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
 
-// const { networkInterfaces } = require("os");
+const { networkInterfaces } = require("os");
 
 function checkAuth(req, res, next) {
   if (req.session.user) {
