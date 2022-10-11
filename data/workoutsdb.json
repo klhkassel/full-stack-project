@@ -1,0 +1,506 @@
+{
+  "categories": [
+    {
+      "type": "Cardio",
+      "id": 1,
+      "img": "/images/cardio.jpg",
+      "benefits": [
+        "Cardio exercise can benefit brain and joint health. One study reported that physical activity may reduce dementia risk, no matter what age you are.",
+        "When you work your muscles, it increases oxygen supply, therefore allowing muscles to work harder. Over time, regular cardio exercise allows your muscles to adapt to an increased workload, making regular activities seem easier.",
+        "Your pancreas is the organ that helps convert the food you eat for energy while also helping aid in digestion. Staying active helps improves blood sugar control, decreases stress on this vital organ and reduces your chance of developing type 2 diabetes. It also helps improves good cholesterol levels while lowering blood fats.",
+        "Physical exercise helps your energy by releasing endorphins, giving you more, lasting energy throughout your day. When it comes to hitting the sheets, struggling to fall asleep is the last thing you want after that long, busy day. The good news is that cardio helps you doze off faster and promotes REM sleep."
+      ],
+
+      "exercises": [
+        {
+          "name": "Power Walking",
+          "type": "Cardio",
+          "id": 1,
+          "equipment": "None",
+          "instructions": "Warm up: Walk at a slow pace for 5 minutes. Then, speed walk for 10 minutes. Cool down: Walk at a slow pace for 5 minutes."
+        },
+        {
+          "name": "Running",
+          "type": "Cardio",
+          "id": 2,
+          "equipment": "None, Optional: treadmill",
+          "instructions": "Warm up: Walk at a slow pace for 5 minutes. Then, run at a comfortable pace for 15 minutes. Cool down: Walk at a slow pace for 5 minutes."
+        },
+        {
+          "name": "Rowing",
+          "type": "Cardio",
+          "id": 3,
+          "equipment": "Rowing Machine",
+          "instructions": "Set your rower for 2,000 meters and begin rowing. At the start of every minute (so when the rower hits 1 minute, then 2 minutes, then 3 minutes, and so on), get off the rower and do a weighted hollow rock ladder. The first time you get off the rower, do 5 hollow rocks. The second time you get off, do 6; keep adding one hollow rock on every time you get off the rower. Aim to finish in 15 to 20 minutes."
+        },
+        {
+          "name": "Cycling",
+          "type": "Cardio",
+          "id": 4,
+          "equipment": "Cycling Machine",
+          "instructions": "Ride at song tempo (70-90 rpm). 30 seconds fast-cadence pedaling (90+ rpm). 30 seconds back into pedaling on the rhythm. 30 seconds fast-cadence pedaling. 30 seconds back into pedaling on the rhythm. 30 seconds fast-cadence pedaling. 30 seconds back into pedaling on the rhythm. Pedal easy for 5 minutes. Repeat two to three times."
+        },
+        {
+          "name": "Swimming",
+          "type": "Cardio",
+          "id": 5,
+          "equipment": "Pool",
+          "instructions": "4 x 25 yards freestyle with 15 seconds rest in between laps. 8 x 50 yards fast kick with 20 seconds rest in between laps. 4 x 25 yards freestyle with 15 seconds rest in between laps. 1 min rest. 4 x 25 yards freestyle with 15 seconds rest in between laps. 6 x 100 yards alternating easy freestyle (odds) and hard freestyle (evens) with 30 seconds rest. 4 x 25 yards freestyle with 15 seconds rest."
+        },
+        {
+          "name": "Jumping Rope",
+          "type": "Cardio",
+          "id": 6,
+          "equipment": "Jump Rope",
+          "instructions": "2 minutes of jumping rope. 20 push-ups. 2 minutes of jumping rope. 40 bodyweight squats. 2 minutes of jumping rope. 30 floor dips. 2 minutes of jumping rope. 15 reverse lunges on each leg. 2 minutes of jumping rope. 1 minute plank. Repeat twice (once if you are just getting started)"
+        },
+        {
+          "name": "Boxing",
+          "type": "Cardio",
+          "id": 7,
+          "equipment": "Punching bag, Boxing gloves",
+          "instructions": "Warmup: 10 minutes jump rope, 20 squats, 20 pushups, 40 crunches. Shadow Boxing(x5):3-minute round: Basic jab, cross, and hook punches, rest 30 seconds. Heavy Bag Workout: Basic Combination(x5): 3-minute round, rest 30 seconds. Finisher: 100 pushups, 100 squats, 200 sit-ups, rest as little as possible."
+        },
+        {
+          "name": "Stair Climber",
+          "type": "Cardio",
+          "id": 8,
+          "equipment": "Stairmaster",
+          "instructions": "Warm Up: Complete a 3-minute walking at 3 RPE before performing 5 rounds of the below intervals, followed by a 2-minute cooldown, for a total of 20 minutes: Double step at 3 RPE for 30 seconds. Side step left at 3 RPE for 30 seconds. Sprint at 7 RPE for 30 seconds. Side step right at 3 RPE for 30 seconds. Sprint at 7 RPE for 60 seconds."
+        },
+        {
+          "name": "Elliptical",
+          "type": "Elliptical",
+          "id": 9,
+          "equipment": "None, Optional: treadmill",
+          "instructions": "Warm up: Walk at a slow pace for 5 minutes. Then, run at a comfortable pace for 15 minutes. Cool down: Walk at a slow pace for 5 minutes."
+        },
+        {
+          "name": "Interval Sprints",
+          "type": "Cardio",
+          "id": 10,
+          "equipment": "None, Optional: treadmill",
+          "instructions": "Warm Up: 5 minutes at 4 RPE. Workout: 3 minutes at 5 RPE, 2 minutes at 6 RPE, 3 minutes at 5 RPE, 2 minutes at 6 RPE. Cool Down: 5 minutes at 4 RPE. "
+        }
+      ]
+    },
+
+    {
+      "type": "Weight Lifting",
+      "id": 2,
+      "img": "/images/weightlifting.jpg",
+      "benefits": [
+        "By stressing your bones, strength training can increase bone density and reduce the risk of osteoporosis.",
+        "Strength training may enhance your quality of life and improve your ability to do everyday activities. Strength training can also protect your joints from injury. Building muscle also can contribute to better balance and may reduce your risk of falls. This can help you maintain independence as you age.",
+        "Strength training can reduce the signs and symptoms of many chronic conditions, such as arthritis, back pain, obesity, heart disease, depression and diabetes.",
+        "Some research suggests that regular strength training and aerobic exercise may help improve thinking and learning skills for older adults."
+      ],
+      "exercises": [
+        {
+          "name": "Chest Press",
+          "type": "Weight Lifting",
+          "id": 1,
+          "equipment": "Dumbbells or Barbell",
+          "instructions": "Lay on your back on the floor, pick up the dumbbells, and press towards the ceiling. Perform slow and controlled movements, concentrating on your chest muscles. Rest for two minutes and do the next push-up chest press set."
+        },
+        {
+          "name": "DB Squats",
+          "type": "Weight Lifting",
+          "id": 2,
+          "equipment": "Dumbbells",
+          "instructions": "Start with your body weight as you dial in your form. After you get used to it, begin to incorporate the dumbbells. Push your butt back as you squat down to keep the pressure off your knees."
+        },
+        {
+          "name": "Deadlift",
+          "type": "Weight Lifting",
+          "id": 3,
+          "equipment": "Dumbbells or Barbell",
+          "instructions": "Go from set one of the squat directly to deadlifts with weight. Keep control of your body and go slow. Go back and do the other two combo sets after resting for two minutes."
+        },
+        {
+          "name": "Rows",
+          "type": "Weight Lifting",
+          "id": 4,
+          "equipment": "Dumbbells or bands",
+          "instructions": "If you are using dumbbells, perform bent-over rows. If using bands, perform the rows in a seated position. Maintain slow and controlled movements so you get the most benefit from your effort."
+        },
+        {
+          "name": "Curls",
+          "type": "Weight Lifting",
+          "id": 5,
+          "equipment": "Dumbbells or bands",
+          "instructions": "Use the dumbbells or bands and go slowly. Keep your elbows against your sides and don't use momentum to aid you in your curl."
+        },
+        {
+          "name": "Shoulder Press",
+          "type": "Weight Lifting",
+          "id": 6,
+          "equipment": "Dumbbells",
+          "instructions": "You can perform these either seated or standing. Hold the dumbbells at shoulder level and press them high over your head. Perform the same movement if using bands."
+        },
+        {
+          "name": "Chest Press",
+          "type": "Weight Lifting",
+          "id": 7,
+          "equipment": "Dumbbells",
+          "instructions": "Lay on your back on the floor, pick up the dumbbells, and press towards the ceiling. Perform slow and controlled movements, concentrating on your chest muscles. Rest for two minutes and do the next push-up chest press set."
+        },
+        {
+          "name": "Planks",
+          "type": "Weight Lifting",
+          "id": 8,
+          "equipment": "None, Optional: Yoga Mat",
+          "instructions": "Get into a push-up position on your elbows instead of your hands, keep your body straight and hold the position for 30 seconds for each round. Rest 15 seconds and then perform another rep. Perform five reps."
+        },
+        {
+          "name": "Dips",
+          "type": "Weight Lifting",
+          "id": 9,
+          "equipment": "Chair or Bench",
+          "instructions": "Perform the dips with your hands behind your back on a chair or bench. Start with your feet on the ground. As you become stronger, place your feet up on another chair to add resistance."
+        },
+        {
+          "name": "Pull Ups",
+          "type": "Weight Lifting",
+          "id": 10,
+          "equipment": "Pull Up Bar, Optional: Bands or Chair",
+          "instructions": "This is definitely one of the hardest exercises for a beginner, so only perform as many as you can. If you need help, use bands or use a chair to get you to the top of the bar, slowly let yourself down, and then repeat."
+        }
+      ]
+    },
+
+    {
+      "type": "Pilates",
+      "id": 3,
+      "img": "/images/pilates.jpg",
+      "benefit1": "It can help relieve tension in your shoulders, back and legs. Having strong core muscles promotes better posture, which, in turn, can prevent or relieve the muscle tension that builds up in our day-to-day routines.",
+      "benefit2": "It boosts your body's natural ability to burn fat. Pilates isn't the best exercise to burn calories quickly, however this doesn't mean it doesn't help your body burn fat.",
+      "benefit3": "It's a great way to cross train and prevent injury. Because it helps build strength and flexibility, Pilates is a great way to add some functional variety into your workout routine.",
+      "benefit4": "It promotes mindfulness and body awareness. Another benefit of Pilates is that it encourages you to stay in touch with your body as you build strength. Other strength training workouts, like weightlifting, encourage a mentality of pushing your body to its limits. This means you might not always be totally listening to your body, making it easier to ignore your body cues.",
+      "exercises": [
+        {
+          "name": "The Hundred",
+          "type": "Pilates",
+          "id": 1,
+          "equipment": "Yoga Mat",
+          "instructions": "Begin by lying on your back with your knees bent as though you are resting your calves on a tabletop. Curl your head off the mat and bring your arms a few inches off the floor by your sides. Pulse your arms as you draw five rhythmic breaths in through your nose, followed by five exhalations. Perform 10 sets for a total of 100 pulses."
+        },
+        {
+          "name": "The Roll-Up",
+          "type": "Pilates",
+          "id": 2,
+          "equipment": "Yoga Mat",
+          "instructions": "Start the roll-up on your back with your legs and arms extended away from your body. Exhale as you bring your arms toward the ceiling and begin to curl your head, shoulders and back off the mat, one vertebrae at a time. Keep your eyes focused on your navel and do not let your heels pop off the floor. As you exhale, slowly lower each part of your back to the mat to return to your beginning position."
+        },
+        {
+          "name": "Single Leg Circles",
+          "type": "Pilates",
+          "id": 3,
+          "equipment": "Yoga Mat",
+          "instructions": "Begin on your back with your legs extended long on the mat. Lift one leg straight up to the ceiling, keeping your arms long by your sides and your navel drawn as close to your spine as possible. Draw small circles with your leg keeping your toes pointed and your torso still. Bring your leg down and repeat with your other leg."
+        },
+        {
+          "name": "Rolling Like a Ball",
+          "type": "Pilates",
+          "id": 4,
+          "equipment": "Yoga Mat",
+          "instructions": "Start in a seated position with your knees bent toward your chest and your feet hovering off the floor. Roll back onto your spine with control as you inhale. Exhale while rolling back to a seated position."
+        },
+        {
+          "name": "Single Leg Stretch",
+          "type": "Pilates",
+          "id": 5,
+          "equipment": "Yoga Mat",
+          "instructions": "Begin this exercise on your back with your knees bent at a 90-degree angle and your head curled off the floor. Straighten one leg away from your body as you hold the shin of your opposite leg and breathe in. Switch your legs as you inhale again. Repeat this switching motion, this time exhaling on each switch. Make this exercise more challenging by lowering your extended leg a few inches."
+        },
+        {
+          "name": "Double Straight Leg Stretch",
+          "type": "Pilates",
+          "id": 6,
+          "equipment": "Yoga Mat",
+          "instructions": "Use the same breathing and leg-switching pattern of the single leg stretch, but this time keep both legs as straight as possible."
+        },
+        {
+          "name": "One-Legged Shoulder Bridges",
+          "type": "Pilates",
+          "id": 7,
+          "equipment": "Yoga Mat",
+          "instructions": "Lying on your back with your knees bent and abs scooped, keep your spine in neutral as you raise your hips off the floor. Extend one leg out in front of you so it's in line with your body, then return your foot to the floor and slowly lower your hips. Perform 12 reps on each leg."
+        },
+        {
+          "name": "Side-Lying Leg Circles",
+          "type": "Pilates",
+          "id": 8,
+          "equipment": "Yoga Mat",
+          "instructions": "Lie on your side with your shoulders and hips stacked. Your legs should be together, slightly turned out, and pulled long. Slowly circle your top leg 10 times in each direction while keeping your torso still. Repeat on the opposite leg."
+        },
+        {
+          "name": "Hip Raises into Leg Extensions",
+          "type": "Pilates",
+          "id": 9,
+          "equipment": "Yoga Mat, Exercise Ball",
+          "instructions": "Lie on your back and put your feet up on a large ball. Raise your hips into a bridge position on an exhale without letting the ball move. Push the ball away on an inhale, return it on an exhale. Inhale and roll down through the spine to neutral."
+        }
+      ]
+    },
+
+    {
+      "type": "Yoga",
+      "id": 4,
+      "img": "/images/yoga.jpg",
+      "benefits": [
+        "Yoga improves strength, balance and flexibility. Slow movements and deep breathing increase blood flow and warm up muscles, while holding a pose can build strength.",
+        "Yoga helps with back pain relief. Yoga is as good as basic stretching for easing pain and improving mobility in people with lower back pain. The American College of Physicians recommends yoga as a first-line treatment for chronic low back pain.",
+        "Yoga can ease arthritis symptoms. Gentle yoga has been shown to ease some of the discomfort of tender, swollen joints for people with arthritis, according to a Johns Hopkins review of 11 recent studies.",
+        "Yoga benefits heart health. Regular yoga practice may reduce levels of stress and body-wide inflammation, contributing to healthier hearts. Several of the factors contributing to heart disease, including high blood pressure and excess weight, can also be addressed through yoga."
+      ],
+      "exercises": [
+        {
+          "name": "Corpse Pose",
+          "type": "Yoga",
+          "id": 1,
+          "equipment": "Yoga Mat",
+          "instructions": "Lie down on your back with your head and limbs resting on the floor and relax. Or, if you are more comfortable on your side, find a side-lying position that works for you."
+        },
+        {
+          "name": "Legs Up the Wall",
+          "type": "Yoga",
+          "id": 2,
+          "equipment": "Yoga Mat",
+          "instructions": "Sit with your right side flush against a wall. Resting your left elbow on the floor, rotate and raise your legs up the wall while lowering your torso so that you are lying on your back with your heels against the wall."
+        },
+        {
+          "name": "Cat-Cow Stretch",
+          "type": "Yoga",
+          "id": 3,
+          "equipment": "Yoga Mat",
+          "instructions": "Get on your hands and knees, with your neck in a neutral position. Keep your wrists directly under your shoulders and your knees directly under your hips. Inhaling into cow pose, arch your back so that your belly approaches the mat, lifting your chest and chin. Exhale into cat pose, drawing your navel in while rounding your back and letting gravity drop your head toward the floor."
+        },
+        {
+          "name": "Tree Pose",
+          "type": "Yoga",
+          "id": 4,
+          "equipment": "Yoga Mat",
+          "instructions": "Start with your feet together and place your right foot on your inner left upper thigh. Press your hands in prayer and find a spot in front of you that you can hold in a steady gaze. Hold and breathe for 8-10 breaths then change sides. Make sure you don't lean in to the standing leg and keep your core engaged and shoulders relaxed."
+        },
+        {
+          "name": "Triangle",
+          "type": "Yoga",
+          "id": 5,
+          "equipment": "Yoga Mat",
+          "instructions": "Stand with your feet wide apart. Stretch your right foot out (90 degrees) while keeping the leg closer to the torso. Keep your feet pressed against the ground and balance your weight equally on both feet. Inhale and as you exhale Rest your right hand on your shin, ankle, or the floor outside your right foot, Stretch your left arm toward the ceiling. Turn your gaze up to the top hand and stay in this pose for 5-8 breaths. Inhale to come up and repeat on the opposite side."
+        },
+        {
+          "name": "Warrior Pose",
+          "type": "Yoga",
+          "id": 6,
+          "equipment": "Yoga Mat",
+          "instructions": "Stand in Tadasana (Mountain Pose). With an exhale, step or lightly jump your feet apart. Raise your arms perpendicular to the floor (and parallel to each other) Turn your left foot in 45 to 60 degrees to the right and your right foot out 90 degrees to the right. Align the right heel with the left heel. Exhale and rotate your torso to the right. With your left heel firmly on the floor, exhale and bend your right knee over the right ankle so the shin is perpendicular to the floor. To come up, inhale, press the back heel firmly into the floor and reach up through the arms, straightening the right knee. Turn the feet forward and release the arms with an exhalation. Take a few breaths, then turn the feet to the left and repeat for the same length."
+        },
+        {
+          "name": "Downward Facing Dog",
+          "type": "Yoga",
+          "id": 7,
+          "equipment": "Yoga Mat",
+          "instructions": "Come onto the floor on your hands and knees. With your hands slightly forward of your shoulders and knees below your hips.Spread your hands wide and press your index finger and thumb into your mat. Exhale and lift your knees away from the floor lift the butt toward the ceiling. Straighten your legs as much as you can and press your heels gently toward the floor. Your head should be between your arms, facing your knees, and your backs should be flat. Hold for 5-10 breaths."
+        },
+        {
+          "name": "Updward-Facing Dog",
+          "type": "Yoga",
+          "id": 8,
+          "equipment": "Yoga Mat",
+          "instructions": "Lie on your stomach on mat . Stretch your legs back, with the tops of your feet on the mat. Bend your elbows and spread your palms on the mat beside your waist. Inhale and press your inner hands firmly into the mat Then straighten your arms and simultaneously lift your cheat up and your legs a few inches off the mat. Pull your shoulders back, squeeze your shoulder blades, and tilt your head toward the ceiling, to open up your chest."
+        },
+        {
+          "name": "Seated Forward Fold",
+          "type": "Yoga",
+          "id": 9,
+          "equipment": "Yoga Mat",
+          "instructions": "Sit on the floor with ith your buttocks supported on a folded blanket your legs extended in front of you. Breathe in and raise your hands over your head and stretch. Extend the arms forward, reaching for your feet. Lift your chest engage your lower abdominals and imagine your belly button moving towards the top of your thighs. Hold the pose for up to 10 breath before slowly releasing with an inhalation."
+        },
+        {
+          "name": "Bridge Pose",
+          "type": "Yoga",
+          "id": 10,
+          "equipment": "Yoga Mat",
+          "instructions": "Begin lying comfortably on your back in a supine position and place your feet hip width apart. Press firmly on to your feet and lift your butt up off the mat. Interlock your palm and press the shoulder toword the floor. Imagine dragging your heels on the mat towards your shoulders to engage your hamstrings. Hold for 8-10 breaths then lower your hips down and repeat two more times."
+        },
+        {
+          "name": "Child's Pose",
+          "type": "Yoga",
+          "id": 11,
+          "equipment": "Yoga Mat",
+          "instructions": "Kneel on the floor. Touch your big toes together and sit on your heels, then separate your knees about as wide as your hips. Exhale and lay your abdomen resting between your inner thighs and rest your forehead on the mat. Rest your arms by your sides with your palms facing up near your feet. Stay in the pose from 5 to 10 breaths. To come up, first lengthen the front torso, and then with an inhalation Gently release back."
+        }
+      ]
+    },
+
+    {
+      "type": "H.I.I.T",
+      "id": 5,
+      "img": "/images/hiit.jpg",
+      "benefits": [
+        "HIIT may help you burn more calories than traditional exercise or burn the same number of calories in a shorter amount of time.",
+        "Due to the intensity of the workout, HIIT can elevate your metabolism for hours after exercise. This results in burning additional calories even after you have finished exercising.",
+        "If you are not very active, you may gain some muscle by starting HIIT, but not as much as you would if you engaged in weight training.",
+        "High intensity interval training can improve oxygen consumption as much as traditional endurance training, even if you exercise only about half as long."
+      ],
+      "exercises": [
+        {
+          "name": "Mountain Climbers",
+          "type": "H.I.I.T",
+          "id": 1,
+          "equipment": "None",
+          "instructions": "Start in a plank, engage the core, and bring your right knee forward under your chest and back to plank. Now, bring your left knee forward and back. Keeping your plank straight as an arrow, pick up the pace."
+        },
+        {
+          "name": "Air Squats",
+          "type": "H.I.I.T",
+          "id": 2,
+          "equipment": "None",
+          "instructions": "Keep legs slightly wider than hip width, toes pointed forward, and drive your hips back as you bend your knees to sit into a squat position. Be sure to keep your heels and toes on the ground, chest up and shoulder back. "
+        },
+        {
+          "name": "Push Ups",
+          "type": "H.I.I.T",
+          "id": 3,
+          "equipment": "None",
+          "instructions": "Focus on keeping your back flat and your elbow trailing directly back and aim for one push-up per second."
+        },
+        {
+          "name": "Split Squat Jumps",
+          "type": "H.I.I.T",
+          "id": 4,
+          "equipment": "None",
+          "instructions": "Stand with right leg about a foot in front of the left. Bend knees and lower into a lunge, keeping your left knee from touching the floor. In one explosive movement, straighten knees and jump, switching legs. Now squat with the opposite leg in front. Keep it going."
+        },
+        {
+          "name": "Jump Lunge",
+          "type": "H.I.I.T",
+          "id": 5,
+          "equipment": "None",
+          "instructions": "Start in a deep lunge, both knees bent, right foot in front. Push through the floor and your jump in the air and scissor your feet so that the left foot lands in front."
+        },
+        {
+          "name": "Burpee Twister with Push-Up",
+          "type": "H.I.I.T",
+          "id": 6,
+          "equipment": "None",
+          "instructions": "From standing, bend your knees, crouch down to the floor, place your hands on the ground, and jump your feet back so you are in an extended plank position. Do a push-up. Then jump feet forward toward your hands again, push off the floor and jump, doing a 180. Now that you are facing the other way, do it again."
+        },
+        {
+          "name": "Plank Jacks",
+          "type": "H.I.I.T",
+          "id": 7,
+          "equipment": "None",
+          "instructions": "Lower yourself down into an extended plank position (arms straight). Focus on maintaining a straight line from your head to your feet. Jump your legs out to the sides, then back together again. Form trumps speed, but nevertheless aim for about 15 plank jacks in 30 seconds."
+        },
+        {
+          "name": "V Hold",
+          "type": "H.I.I.T",
+          "id": 8,
+          "equipment": "None",
+          "instructions": "Sit on the floor, legs straight in front of you, arms at your sides. Shift your weight back as you raise both legs off the floor, contracting your abs until your body form the shape of a V. Stretch arms out in front of you. Hold for 30 seconds."
+        },
+        {
+          "name": "Side Plank",
+          "type": "H.I.I.T",
+          "id": 9,
+          "equipment": "None",
+          "instructions": "Lie on one side with your legs stacked and fully extended. Prop your body up with your elbow and forearm, lift your hip off the ground and squeeze your abs so your body runs in a straight line. For added difficulty, lift your high leg off the lower leg. Switch sides."
+        },
+        {
+          "name": "High Knees",
+          "type": "H.I.I.T",
+          "id": 10,
+          "equipment": "None",
+          "instructions": "With upper arms by your side, forearms at a 90-degree angle, and hands open, bring your left knee to your hand, then right. Repeat, fast."
+        }
+      ]
+    },
+
+    {
+      "type": "Barre",
+      "id": 6,
+      "img": "/images/barre.jpg",
+      "benefits": [
+        "One benefit of barre is that it will strengthen your muscles, particularly your: core, arms, thighs, glutes, pelvic floor. Strengthening your muscles helps you: maintain muscle mass as you age, control your weight, keep your joints flexible, balance better.",
+        "Participating in regular barre classes will increase your muscular endurance. Endurance influences your heartbeat and breathing patterns. Your endurance increases your stamina, so you will be able to maintain a higher level of activity in your everyday life. Plus, you will be able to exercise longer and harder. Endurance also lowers your risk of developing health conditions like diabetes, heart disease, and certain types of cancer.",
+        "Barre workouts feature a lot of stretching. This helps improve your flexibility and the range of motion in your joints. Maintaining flexibility makes it much easier to move throughout your day. It can even prevent stiffness when you sit for long periods of time.",
+        "You may find yourself sitting or standing straighter after doing barre. This could be an external benefit from these workouts. Good posture also positively influences what is going on inside your body. It can decrease pressure on your spine, reducing your chance of back pain and injury. It also helps you take deep breaths."
+      ],
+      "exercises": [
+        {
+          "name": "Clam Shell",
+          "type": "Barre",
+          "id": 1,
+          "equipment": "None",
+          "instructions": "Lying on your side body, place a ball or pillow under your ribcage to stay lifted. Press your forearm into the floor with your knees bent in front of your hips. Connect with heels and toes and engage your obliques. Lift your top knee without rocking your hips.  Lift full rage, pulse at the top and hold. Press knee towards your back while keeping your hips stacked. Extend the top leg straight and pulse the straight leg up and inch and down an inch.  Can circle back + forward."
+        },
+        {
+          "name": "Table Top Dart",
+          "type": "Barre",
+          "id": 2,
+          "equipment": "None",
+          "instructions": "Stack your wrist under shoulders with a soft bend in your elbows. Have your head in line with your spine and your base knee directly under your hip. Engage your core and lift the working leg. Place the ball behind your working knee and hold a 90-degree angle. Lift and lower the working leg, pulse at the top Hold at the top and squeeze in on the ball or make tiny circles one direction/repeat going the opposite direction."
+        },
+        {
+          "name": "Plie and Reach",
+          "type": "Barre",
+          "id": 3,
+          "equipment": "None",
+          "instructions": "With feet slightly wider than shoulder-distance apart and turned out, bend the knees into a deep squat. Reach the arms out to the sides to open the chest. Stand and reach one arm up and over head toward the opposite side. Repeat, alternating sides."
+        },
+        {
+          "name": "Alternating Toe Dips",
+          "type": "Barre",
+          "id": 4,
+          "equipment": "None",
+          "instructions": "Lie on your back with your knees bent to 90 degrees over your hips (so hips and knees are both 90). Point the toes, and then, keeping the knee at 90 degrees, imagine you are dipping the toes of one foot into a pool of water on the floor in front of you. Bring the first leg back in and repeat to the second side. Repeat for 32 counts moving at a tempo of 2 counts out and 2 counts in, then 16 counts moving at a tempo of 1 count per movement, then 8-16 moving at a 1-tempo count, but quickly alternating the legs rather than letting them meet in the middle."
+        },
+        {
+          "name": "Quadrupled Single Leg Extensions",
+          "type": "Barre",
+          "id": 5,
+          "equipment": "None",
+          "instructions": "From hands and knees, extend one leg straight back with toes resting on the floor (notice if the opposite hip drops to the side and pull it back in). Lift and lower your straight leg as high as you can without arching the back—this should not be very high. Repeat for about 30-45 seconds. Then, hold the leg up and pulse it just an inch higher for another 15-30 seconds. Keeping the leg high, flex the foot and bend your knee to 90 degrees, squeezing the heel toward your glute. Extend the leg straight and repeat for 30-45 seconds. Finish by keeping the leg high and knee bent, and pulse the heel in toward your seat for 15-30 seconds."
+        },
+        {
+          "name": "Tricep Kickback",
+          "type": "Barre",
+          "id": 6,
+          "equipment": "None",
+          "instructions": "From an all-fours position on the ground, wrists under shoulders and knees under hips, drive the left elbow back behind you, with the palm & inside of the arm facing you. Extend the left hand as long & straight behind you as possible, accenting the squeeze of the tricep. Pull the hand back to your shoulder to work the bicep and repeat the extension. For more of a burn, hold the arm behind you & take tiny lifts, squeezing the tricep deeper. Make sure to pull your belly button up & in so as to protect your low back. Repeat 15-20 times before switching sides. Repeat both sides 2-4 times and remember to breathe. For more, add a set of light hand weights. To take this down a notch, perform using a couch or counter under the hands for less stress on the low back and wrists."
+        },
+        {
+          "name": "Open Pretzel Side Seat",
+          "type": "Barre",
+          "id": 7,
+          "equipment": "None",
+          "instructions": "From an all four position on the ground, wrists under shoulders and knees under hips, pull your left heel into your seat & point your toe. Drive your left knee up to about 90 degrees behind you, feel your glute max engage. Then, point your knee to the corner behind you, letting the knee drop a hair and the inner thigh will point more towards the ground. Almost as if you are trying to tap yourself on the shoulder with your toe, wrap your toe around to the right side of your body, trying to keep your hips & shoulders as square to the ground as possible. Make sure to pull your belly button up & in so as to protect your low back. Repeat the squeeze in a pulse-like motion for 20 secs before switching sides."
+        },
+        {
+          "name": "Inner Thigh Leg Squeeze",
+          "type": "Barre",
+          "id": 8,
+          "equipment": "None",
+          "instructions": "Laying on your left side and extending the legs long, press onto your forearm with your elbow under your shoulder. Press out of the side body to activate your shoulder and obliques. Pointing your toes, lift your top leg to 90 degrees, pulling your quad off your kneecap. Flex the feet and squeeze the top leg back down to meet the bottom leg. Keep your shoulders and hips as square to the side as possible. Keep pulling the belly away from the earth and think about pulling the belly button up & in to activate your deeper core muscles."
+        },
+        {
+          "name": "March",
+          "type": "Barre",
+          "id": 9,
+          "equipment": "None",
+          "instructions": "Release your arms high to open the chest or add a tiny hop to turn it into a skip march to up the impact. While marching you, should always be breathing and working your inner core muscles."
+        },
+        {
+          "name": "Glute Bridge",
+          "type": "Barre",
+          "id": 10,
+          "equipment": "None",
+          "instructions": "You can perform these bilaterally (shown here) or unilaterally by placing one foot on the floor and one towards the sky, keeping your knees in line. You can also add resistance by placing a weight on the front of your pelvis or adding a resistance band to your thighs and add an outward knee press at the top to include the outside of your glutes"
+        }
+      ]
+    }
+  ]
+}

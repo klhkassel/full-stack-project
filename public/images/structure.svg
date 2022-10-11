@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60.001" viewBox="0 0 200 60.001">
+  <g id="Structure" transform="translate(-1445 -746)">
+    <g id="Group_13" data-name="Group 13">
+      <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(1445 746)" fill="none" stroke="#e5a30d" stroke-width="10" opacity="0.5">
+        <circle cx="30" cy="30" r="30" stroke="none"/>
+        <circle cx="30" cy="30" r="25" fill="none"/>
+      </g>
+      <g id="Subtraction_2" data-name="Subtraction 2" transform="translate(1061 237)" fill="none">
+        <path d="M414,569h0V559a20,20,0,0,0,0-40V509a30,30,0,1,1,0,60Z" stroke="none"/>
+        <path d="M 414.0009155273438 569.000732421875 L 414 569.000732421875 L 414 558.9999389648438 C 419.3341369628906 558.9993896484375 424.3538513183594 556.9169921875 428.135498046875 553.1353759765625 C 431.9171752929688 549.3536987304688 433.9998168945312 544.333740234375 433.9998168945312 539.0001220703125 C 433.9998168945312 527.9722290039062 425.0279541015625 519.0003051757812 414 519.0003051757812 L 414 509.0004272460938 C 418.0520324707031 509.0004272460938 421.9805603027344 509.7937927246094 425.6775207519531 511.3575134277344 C 429.2510375976562 512.8692016601562 432.4592590332031 515.032470703125 435.2130126953125 517.787109375 C 437.9688720703125 520.5430297851562 440.1318054199219 523.751220703125 441.6417236328125 527.3226318359375 C 443.2063903808594 531.0196533203125 443.9997253417969 534.9485473632812 443.9997253417969 539.0001220703125 C 443.9997253417969 543.05078125 443.2063903808594 546.9796752929688 441.6417236328125 550.6776123046875 C 440.1318054199219 554.2489624023438 437.9688720703125 557.4571533203125 435.2130126953125 560.213134765625 C 432.4592895507812 562.9677734375 429.2510681152344 565.1309814453125 425.6775207519531 566.6427001953125 C 421.98046875 568.2064819335938 418.0518798828125 568.9998168945312 414.0009155273438 569.000732421875 Z" stroke="none" fill="#e5a30d"/>
+      </g>
+    </g>
+    <g id="Group_14" data-name="Group 14">
+      <rect id="Rectangle_36" data-name="Rectangle 36" width="50" height="15" rx="7.5" transform="translate(1513 749)" fill="#4a01f9" opacity="0.5"/>
+      <g id="Rectangle_37" data-name="Rectangle 37" transform="translate(1513 770)" fill="#777" stroke="#707070" stroke-width="1" opacity="0.3">
+        <rect width="88" height="8" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="87" height="7" rx="3.5" fill="none"/>
+      </g>
+      <g id="Rectangle_38" data-name="Rectangle 38" transform="translate(1513 783)" fill="#777" stroke="#707070" stroke-width="1" opacity="0.3">
+        <rect width="69" height="8" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="68" height="7" rx="3.5" fill="none"/>
+      </g>
+      <g id="Rectangle_39" data-name="Rectangle 39" transform="translate(1513 796)" fill="#777" stroke="#707070" stroke-width="1" opacity="0.3">
+        <rect width="132" height="8" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="131" height="7" rx="3.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

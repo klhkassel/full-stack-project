@@ -1,14 +1,13 @@
 {
   "name": "workout-planner",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "app.js",
     "db:create": "createdb workout",
     "db:destroy": "dropdb workout",
-    "db:init": "psql -f schema.sql workout",
-    "db:seed": "psql -f seed.sql workout",
+    "db:init": "psql -f schema2.sql workout",
+    "db:seed": "psql -f seed2.sql workout",
     "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-es6-template-engine": "^2.2.3",
@@ -23,5 +23,14 @@
     "pg-promise": "^10.12.0",
     "reques": "^0.0.1-security",
     "request": "^2.88.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klhkassel/full-stack-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/klhkassel/full-stack-project/issues"
+  },
+  "homepage": "https://github.com/klhkassel/full-stack-project#readme",
+  "description": ""
 }
