@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const http = require("http");
 const hostname = "127.0.0.1";
 const port = 3000;
@@ -9,29 +13,23 @@ const server = http.createServer(app);
 const pgp = require("pg-promise")();
 const db = pgp("postgres://localhost:5432/workout");
 
-//login authentication
+//login added 2
 const database = require("../models");
 const bcrypt = require("bcrypt");
-const saltRounds = 10;
+const passport = require("passport");
+const flash = require("express-flash");
 const session = require("express-session");
-const cookieParser = require("cookie-parser");
+const methodOverride = require("method-override");
 
-app.use(cookieParser());
-app.use(
-  session({
-    secret: "secret",
-    resave: false,
-    saveUnititalized: true,
-    cookie: {
-      secure: false,
-      maxAge: 2592000,
-    },
-  })
+const initializePassport = require("./passport-config");
+initializePassport(
+  passport,
+  (email) => users.find((user) => user.email === email),
+  (id) => users.find((user) => user.id === id)
 );
 
-bcrypt.hash(myPassword, saltRounds, (err, hash) => {});
-
-//
+const users = [];
+//login added end 2
 
 const es6Renderer = require("express-es6-template-engine");
 const { read } = require("fs");
@@ -39,6 +37,21 @@ app.engine("html", es6Renderer);
 app.set("views", "templates");
 app.set("view engine", "ejs");
 app.use(express.json());
+
+//login added
+app.use(express.urlencoded({ extended: false }));
+app.use(flash());
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(methodOverride("_method"));
+//end login added
 
 app.use(express.static("public"));
 
@@ -74,43 +87,66 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-//login
-app.post("/contact", (req, res) => {
-  const email = req.body.email;
-  const password = req.body.password;
-
-  findUser(email, password)
-    .then((user) => {
-      req.session.email = user;
-      res.redirect("/index");
-    })
-    .catch((err) => {
-      res.send("login failure");
-    });
-});
 
 //login page: storing and comparing email and password,and redirecting to home page after login
-app.post("/user", function (req, res) {
-  db.User.findOne({
-    where: {
-      email: req.body.email,
-    },
-  }).then(function (user) {
-    if (!user) {
-      res.redirect("/contact");
-    } else {
-      bcrypt.compare(req.body.password, user.password, function (err, result) {
-        if (result == true) {
-          res.redirect("/index");
-        } else {
-          res.send("Incorrect password");
-          res.redirect("/");
-        }
-      });
-    }
-  });
+app.get("/", checkAuthenticated, (req, res) => {
+  res.render("index.ejs", { name: req.user.name });
 });
-//
+
+app.get("/login", checkNotAuthenticated, (req, res) => {
+  res.render("login.ejs");
+});
+
+app.post(
+  "/login",
+  checkNotAuthenticated,
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/login",
+    failureFlash: true,
+  })
+);
+
+app.get("/register", checkNotAuthenticated, (req, res) => {
+  res.render("register.ejs");
+});
+
+app.post("/register", checkNotAuthenticated, async (req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    users.push({
+      id: Date.now().toString(),
+      name: req.body.name,
+      email: req.body.email,
+      password: hashedPassword,
+    });
+    console.log(hashedPassword);
+    res.redirect("/login");
+  } catch {
+    res.redirect("/register");
+  }
+});
+
+app.delete("/logout", (req, res) => {
+  req.logOut();
+  res.redirect("/login");
+});
+
+function checkAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+
+  res.redirect("/login");
+}
+
+function checkNotAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/");
+  }
+  next();
+}
+/////////////////////////////
 
 app.get("/faq", (req, res) => {
   res.render("faq");
