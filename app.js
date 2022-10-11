@@ -40,7 +40,8 @@ app.use(
 app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
-const { networkInterfaces } = require("os");
+
+// const { networkInterfaces } = require("os");
 
 function checkAuth(req, res, next) {
   if (req.session.user) {
@@ -60,6 +61,7 @@ app.use(require('./routes/otherRoutes'))
 //Workout_builder, exercises, register, and login routes
 
 
+
 //WORKOUT_BUILDER
 app.get("/workout_builder", checkAuth, async(req, res) => {
   let dayExercises = []
@@ -73,6 +75,11 @@ app.get("/workout_builder", checkAuth, async(req, res) => {
         exInstruction: day.instructions
       }
     )
+    // let calendarReset = await db.any("DELETE FROM daysOfWeek_Exercise")
+    // calendarReset.forEach(exercise  => {
+
+
+    // })
     // console.log(dayExercises)
   })
 

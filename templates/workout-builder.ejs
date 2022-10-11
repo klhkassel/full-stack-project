@@ -517,7 +517,6 @@
     <!-- Wow Animation JS Link -->
     <script src="/js/wow.min.js"></script>
 
-
 <script>
     // function resetCalendar() {
     //     const calendarContent = body.data("calendarcontent")
@@ -528,6 +527,24 @@
 </html>
     <!-- Custom JS Link -->
     <script src="/js/custom.js"></script>
+
+
+    <script>
+        function resetBtn() {
+            console.log("button clicked")
+            let itemsToHide = document.querySelectorAll("schedule-list-content")
+            itemsToHide.forEach(exercise => exercise.addEventListener("click", (event) => {
+                event.preventDefault();
+                style.display = "hide"
+            }))
+            // $(document).ready(function(){
+            //         $("schedule-list-content").remove();
+            //     })
+            // document.querySelectorAll("schedule-list-content").style.display = "block";
+       // })
+        }
+
+    </script>
   </body>
 </html>
 

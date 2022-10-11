@@ -1,4 +1,3 @@
-
 -- CREATE TABLE workout_input (
 --         id serial PRIMARY KEY,
 --         exercise varchar,
@@ -26,6 +25,7 @@ CREATE TABLE daysOfWeek_Exercises (
 --     workout_type varchar  ,
 --     benefits varchar
 -- )
+
 -- DROP TABLE users
 
 CREATE TABLE users (
