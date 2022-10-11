@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
 const server = http.createServer(app)
+const bcrypt = require('bcrypt')
 
 const pgp = require("pg-promise")();
 const db = pgp("postgres://localhost:5432/workout");
@@ -17,18 +18,21 @@ const { read } = require("fs");
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'ejs');
-// app.use(express.json())
+// app.use(express.json()):
+
 
 app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
 
-app.get("/workout_builder", async (req, res) => {
+//all other routes
+
+app.use(require('./routes/otherRoutes'))
+
+app.get("/workout_builder", async(req, res) => {
   let dayExercises = []
- 
   let calendarInfo = await db.any("Select * FROM daysOfWeek_Exercises JOIN workout_input ON daysOfWeek_Exercises.workout_input = workout_input.id JOIN dayofweek ON daysOfWeek_Exercises.dayofweek = dayofweek.id");
   calendarInfo.forEach(day => {
-
     dayExercises.push(
       {
         dayName: day.dayofweek,
@@ -39,37 +43,13 @@ app.get("/workout_builder", async (req, res) => {
     )
     // console.log(dayExercises)
   })
+
+  // let calendarReset = await db.any("DELETE FROM daysOfWeek_Exercise");
+
   res.render("workout-builder", {exerciseData, dayExercises, calendarInfo} )
 });
 
 
-app.get("/", (req, res) => {
-  res.render("index", {exerciseData})
-})
-
-app.get("/about_us", (req, res) => {
-  res.render("about-us")
-})
-
-app.get("/blog_detail", (req, res) => {
-  res.render("blog-detail")
-})
-
-app.get("/blog_list", (req, res) => {
-  res.render("blog-list")
-})
-
-app.get("/bmi_calc", (req, res) => {
-  res.render("bmi-calculator")
-})
-
-app.get("/contact", (req, res) => {
-  res.render("contact")
-})
-
-app.get("/faq", (req, res) => {
-  res.render("faq")
-})
 
 app.get("/exercises/:id", async (req, res) => {
   let id = req.params.id
@@ -103,7 +83,7 @@ app.post("/exercises", async (req, res) => {
   const selectedDays = req.body.daysOfWeek;
 
   selectedDays.forEach(day => {
-    db.query(`INSERT INTO daysOfWeek_Exercises(workout_input, dayofweek) VALUES(${exerciseId}, ${day})`);
+  db.query(`INSERT INTO daysOfWeek_Exercises(workout_input, dayofweek) VALUES(${exerciseId}, ${day})`);
   });
 
   res.sendStatus(200);
@@ -127,7 +107,46 @@ app.post("/exercises1", async (req, res) => {
 //   res.json(records);
 // });
 
+app.get('/register', (req, res) => {
+  res.render('register')
+})
 
+app.post('/register', (req, res) => {
+  const {email, password} = req.body;
+  let q = "INSERT INTO users VALUES (default, ${email}, ${hash})"
+  console.log(`username: ${email} and password: ${password}`)
+  bcrypt.hash(password, 10, async (err, hash) => {
+    console.log(`hash: ${hash}`)
+  db.result(q, {email,hash})
+    console.log('after insert')
+    // .then((result) => {
+      console.log('redirect')
+      res.redirect('login');
+    // })
+  })
+});
+
+
+app.get('/login', (req, res) => {
+  res.render('login')
+});
+
+app.post('/login', async (req, res) => {
+  const {email, password} = req.body;
+  let q = "SELECT * from users WHERE email = ${email}"
+  console.log(email, password)
+  db.result({email, hash}, q => {
+    console.log(user)
+    bcrypt.compare(password, user.password, (err, match) => {
+      if(match) {
+        res.redirect('/')
+      } else {
+        console.log('redirect')
+        res.redirect('/login')
+      }
+    })
+  })
+});
 
 // For invalid routes
 app.get('*', (req, res) => {
