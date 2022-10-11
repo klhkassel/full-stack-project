@@ -6,13 +6,13 @@
 --     );
 
 
-CREATE TABLE dayofweek (
-    id serial PRIMARY KEY,
-    dayofweek varchar
+-- CREATE TABLE dayofweek (
+--     id serial PRIMARY KEY,
+--     dayofweek varchar
 
-);
+-- );
 
--- DROP TABLE daysOfWeek_Exercises
+-- DROP TABLE daysOfWeek_Exercises;
 
 CREATE TABLE daysOfWeek_Exercises (
     workout_input integer REFERENCES workout_input(id),
@@ -26,3 +26,11 @@ CREATE TABLE daysOfWeek_Exercises (
 --     benefits varchar
 -- )
 
+-- DROP TABLE users
+
+CREATE TABLE users (
+    id serial PRIMARY KEY,
+    name varchar,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    password TEXT NOT NULL
+);
