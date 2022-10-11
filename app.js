@@ -112,12 +112,12 @@ app.get('/register', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-  const {email, password} = req.body;
-  let q = "INSERT INTO users VALUES (default, ${email}, ${hash})"
-  console.log(`username: ${email} and password: ${password}`)
+  const {name, email, password} = req.body;
+  let q = "INSERT INTO users VALUES (default, ${name},${email}, ${hash})"
+  console.log(`name: ${name} username: ${email} and password: ${password}`)
   bcrypt.hash(password, 10, async (err, hash) => {
     console.log(`hash: ${hash}`)
-  db.result(q, {email,hash})
+  db.result(q, {name,email,hash})
     console.log('after insert')
     // .then((result) => {
       console.log('redirect')
@@ -133,10 +133,9 @@ app.get('/login', (req, res) => {
 
 app.post('/login', async (req, res) => {
   const {email, password} = req.body;
-  let q = "SELECT * from users WHERE email = ${email}"
   console.log(email, password)
-  db.result({email, hash}, q => {
-    console.log(user)
+  await db.one(`SELECT * FROM users WHERE email = '${email}'`)
+  .then((user) => {
     bcrypt.compare(password, user.password, (err, match) => {
       if(match) {
         res.redirect('/')
