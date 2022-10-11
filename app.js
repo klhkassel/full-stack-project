@@ -148,7 +148,7 @@ app.post("/exercises1",async (req, res) => {
 
 
 //REGISTER
-app.get('/register', checkAuth,(req, res) => {
+app.get('/register', (req, res) => {
   res.render('register')
 })
 
