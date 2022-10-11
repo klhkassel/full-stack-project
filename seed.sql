@@ -1,4 +1,3 @@
-
 -- subject to change possibly
 insert into users
      (email, password)
@@ -9,3 +8,4 @@ values
     ('elouisa@email.com', crypt('elouisaspassword', gen_salt('bf')),
     ('Alicia@email.com', crypt('aliciaspassword', gen_salt('bf')),
     ('Jawann@gmail.com', crypt('jawaanspassword', gen_salt('bf'));
+
