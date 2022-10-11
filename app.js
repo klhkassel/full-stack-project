@@ -9,6 +9,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
 const server = http.createServer(app)
 const bcrypt = require('bcrypt')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
 
 const pgp = require("pg-promise")();
 const db = pgp("postgres://localhost:5432/workout");
@@ -20,16 +22,46 @@ app.set('views', 'templates');
 app.set('view engine', 'ejs');
 // app.use(express.json()):
 
+app.use(cookieParser());
+app.use(
+  session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: false,
+      maxAge: 2592000,
+    }
+
+  })
+
+)
 
 app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
+const { networkInterfaces } = require("os");
 
-//all other routes
+function checkAuth(req, res, next) {
+  if (req.session.user) {
+    next();
+  } else if (req.path == '/login') {
+    next();
+  } else {
+    res.redirect('/login');
+  }
+}
+
+//ALL OTHER ROUTES
 
 app.use(require('./routes/otherRoutes'))
 
-app.get("/workout_builder", async(req, res) => {
+
+//Workout_builder, exercises, register, and login routes
+
+
+//WORKOUT_BUILDER
+app.get("/workout_builder", checkAuth, async(req, res) => {
   let dayExercises = []
   let calendarInfo = await db.any("Select * FROM daysOfWeek_Exercises JOIN workout_input ON daysOfWeek_Exercises.workout_input = workout_input.id JOIN dayofweek ON daysOfWeek_Exercises.dayofweek = dayofweek.id");
   calendarInfo.forEach(day => {
@@ -50,8 +82,8 @@ app.get("/workout_builder", async(req, res) => {
 });
 
 
-
-app.get("/exercises/:id", async (req, res) => {
+//EXERCISES
+app.get("/exercises/:id", checkAuth,async (req, res) => {
   let id = req.params.id
   let workouts = []
   let benefits = []
@@ -89,7 +121,7 @@ app.post("/exercises", async (req, res) => {
   res.sendStatus(200);
 });
 
-app.post("/exercises1", async (req, res) => {
+app.post("/exercises1",async (req, res) => {
   const exerciseId = req.body.exerciseId;
   console.log(exerciseId)
   // const selectedDays = .daysOfWeek;
@@ -107,7 +139,9 @@ app.post("/exercises1", async (req, res) => {
 //   res.json(records);
 // });
 
-app.get('/register', (req, res) => {
+
+//REGISTER
+app.get('/register', checkAuth,(req, res) => {
   res.render('register')
 })
 
@@ -126,8 +160,8 @@ app.post('/register', (req, res) => {
   })
 });
 
-
-app.get('/login', (req, res) => {
+//LOGIN
+app.get('/login', checkAuth,(req, res) => {
   res.render('login')
 });
 
@@ -138,6 +172,7 @@ app.post('/login', async (req, res) => {
   .then((user) => {
     bcrypt.compare(password, user.password, (err, match) => {
       if(match) {
+        req.session.user = user;
         res.redirect('/')
       } else {
         console.log('redirect')
@@ -147,7 +182,7 @@ app.post('/login', async (req, res) => {
   })
 });
 
-// For invalid routes
+//INVALID ROUTES
 app.get('*', (req, res) => {
     res.send('404! This is an invalid URL.');
   });

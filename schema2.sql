@@ -13,12 +13,12 @@
 
 -- );
 
--- -- DROP TABLE daysOfWeek_Exercises
+-- DROP TABLE daysOfWeek_Exercises;
 
--- CREATE TABLE daysOfWeek_Exercises (
---     workout_input integer REFERENCES workout_input(id),
---     dayofweek integer REFERENCES dayofweek(id)
--- );
+CREATE TABLE daysOfWeek_Exercises (
+    workout_input integer REFERENCES workout_input(id),
+    dayofweek integer REFERENCES dayofweek(id)
+);
 
 
 -- CREATE TABLE workoutBenefits (
