@@ -22,6 +22,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 let exerciseData = require("./data/workoutsdb");
+const { callbackify } = require("util");
 
 app.get("/workout_builder", async (req, res) => {
   let dayExercises = []
@@ -37,6 +38,11 @@ app.get("/workout_builder", async (req, res) => {
         exInstruction: day.instructions
       }
     )
+    // let calendarReset = await db.any("DELETE FROM daysOfWeek_Exercise")
+    // calendarReset.forEach(exercise  => {
+
+
+    // })
     // console.log(dayExercises)
   })
   res.render("workout-builder", {exerciseData, dayExercises, calendarInfo} )

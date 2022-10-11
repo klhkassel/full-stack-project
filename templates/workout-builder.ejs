@@ -173,7 +173,7 @@
               <div class="title">
                 <h2 class="h2-title">Your Personalized Workout Schedule</h2>
                 <h6>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary" onclick="resetBtn()">
                     Reset Schedule
                   </button>
                 </h6>
@@ -519,15 +519,25 @@
     <!-- Wow Animation JS Link -->
     <script src="/js/wow.min.js"></script>
 
-<<<<<<< HEAD
-<script>
-</script>
-
-</body>
-</html>
-=======
     <!-- Custom JS Link -->
     <script src="/js/custom.js"></script>
+
+
+    <script>
+        function resetBtn() {
+            console.log("button clicked")
+            let itemsToHide = document.querySelectorAll("schedule-list-content")
+            itemsToHide.forEach(exercise => exercise.addEventListener("click", (event) => {
+                event.preventDefault();
+                style.display = "hide"
+            }))
+            // $(document).ready(function(){
+            //         $("schedule-list-content").remove();
+            //     })
+            // document.querySelectorAll("schedule-list-content").style.display = "block";
+       // })
+        }
+
+    </script>
   </body>
 </html>
->>>>>>> main
