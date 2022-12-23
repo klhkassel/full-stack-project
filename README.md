@@ -3,7 +3,6 @@
 * [General Info](#general-info)
 * [Tech Stack](#tech-stack)
 * [Minimum Viable Product](#minimum-viable-product)
-* [Stretch Goals Completed](#stretch-goals-completed)
 * [Stretch Goals To Be Completed](#stretch-goals-to-be-completed)
 * [Dev Team](#dev-team)
 * [Setup](#setup)
